@@ -3,46 +3,51 @@
 
 define('LARAVEL_START', microtime(true));
 
-// Cek apakah vendor autoload ada
-if (file_exists(__DIR__ . '/vendor/autoload.php')) {
-    require __DIR__ . '/vendor/autoload.php';
-}
+/*
+|--------------------------------------------------------------------------
+| Register The Auto Loader
+|--------------------------------------------------------------------------
+|
+| Composer provides a convenient, automatically generated class loader
+| for our application. We just need to utilize it! We'll require it
+| into the script here so that we do not have to worry about the
+| loading of any of our classes manually. It's great to relax.
+|
+*/
 
-$command = $argv[1] ?? 'help';
+require __DIR__.'/vendor/autoload.php';
 
-if ($command === 'serve') {
-    $host = '127.0.0.1';
-    $port = 8000;
-    
-    // Cek apakah port atau host ditentukan
-    foreach ($argv as $arg) {
-        if (strpos($arg, '--port=') === 0) {
-            $port = substr($arg, 7);
-        }
-        if (strpos($arg, '--host=') === 0) {
-            $host = substr($arg, 7);
-        }
-    }
+$app = require_once __DIR__.'/bootstrap/app.php';
 
-    echo "\n  Laravel development server started: http://{$host}:{$port}\n";
-    echo "  Portofolio: Perdi (NPM: 24312212) — S1 Informatika\n";
-    echo "  Tekan Ctrl+C untuk menghentikan server.\n\n";
+/*
+|--------------------------------------------------------------------------
+| Run The Artisan Application
+|--------------------------------------------------------------------------
+|
+| When we run the console application, the current CLI command will be
+| executed in this console and the response sent back to a terminal
+| or another output device for the developers. Here goes nothing!
+|
+*/
 
-    passthru(PHP_BINARY . " -S {$host}:{$port} -t \"" . __DIR__ . "/public\"");
-    exit(0);
-}
+$kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
 
-if ($command === 'about' || $command === 'info') {
-    echo "\n  Aplikasi Portofolio Laravel & Tailwind CSS\n";
-    echo "  Nama Pengembang : Perdi\n";
-    echo "  NPM Mahasiswa   : 24312212\n";
-    echo "  Program Studi   : S1 Informatika\n";
-    echo "  Email           : perdi24312212@gmail.com\n";
-    echo "  Telepon / WA    : 085319147609\n\n";
-    exit(0);
-}
+$status = $kernel->handle(
+    $input = new Symfony\Component\Console\Input\ArgvInput,
+    new Symfony\Component\Console\Output\ConsoleOutput
+);
 
-echo "\n  Laravel & PHP OOP Console — Perdi (NPM: 24312212)\n\n";
-echo "  Perintah tersedia:\n";
-echo "    php artisan serve          Menjalankan server web lokal (http://127.0.0.1:8000)\n";
-echo "    php artisan about          Menampilkan identitas & konfigurasi portofolio\n\n";
+/*
+|--------------------------------------------------------------------------
+| Shutdown The Application
+|--------------------------------------------------------------------------
+|
+| Once Artisan has finished running, we will fire off the shutdown events
+| so that any final work may be done by the application before we shut
+| down the process. This is the last thing to happen to the request.
+|
+*/
+
+$kernel->terminate($input, $status);
+
+exit($status);

@@ -13,6 +13,7 @@ return new class extends Migration
             $table->foreignId('project_id')->constrained()->cascadeOnDelete();
             $table->foreignId('skill_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
+            $table->unique(['project_id', 'skill_id']);
         });
     }
 

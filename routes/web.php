@@ -1,14 +1,25 @@
 <?php
 
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [PortfolioController::class, 'index'])->name('home');
-Route::get('/api/portfolio', [PortfolioController::class, 'apiIndex'])->name('api.portfolio');
-Route::get('/api/projects', [PortfolioController::class, 'apiProjects'])->name('api.projects');
-Route::get('/api/skills', [PortfolioController::class, 'apiSkills'])->name('api.skills');
-Route::get('/api/experience', [PortfolioController::class, 'apiExperience'])->name('api.experience');
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/portfolio', [PortfolioController::class, 'index'])->name('home');
 
 Route::post('/contact', [ContactController::class, 'send'])
     ->middleware('throttle:5,1')

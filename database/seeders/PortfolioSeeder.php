@@ -2,142 +2,102 @@
 
 namespace Database\Seeders;
 
+use App\Models\Certificate;
+use App\Models\Experience;
+use App\Models\Profile;
+use App\Models\Project;
+use App\Models\Skill;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
-use App\Models\Profile;
-use App\Models\Skill;
-use App\Models\Project;
-use App\Models\Experience;
-use App\Models\Certificate;
 
 class PortfolioSeeder extends Seeder
 {
     public function run(): void
     {
-        // ----------------------------------------------------------------
-        // 1. Profile
-        // ----------------------------------------------------------------
-        Profile::create([
-            'full_name'      => 'Perdi',
-            'headline'       => 'Full-Stack Web Developer & Mahasiswa S1 Informatika',
-            'bio'            => 'Mahasiswa S1 Informatika (NPM: 24312212) yang berfokus membangun aplikasi web modern menggunakan Laravel, PHP OOP Class, dan Tailwind CSS. Aktif di HIMA Informatika dan berpengalaman dalam pengembangan sistem informasi berbasis web.',
-            'photo_url'      => 'images/foto.jpg',
-            'cv_url'         => null,
-            'email'          => 'perdi24312212@gmail.com',
-            'phone'          => '085319147609',
-            'location'       => 'Bandar Lampung, Indonesia',
-            'github_url'     => 'https://github.com/perdi24312212',
-            'linkedin_url'   => 'https://linkedin.com/in/perdi-informatika',
-            'instagram_url'  => null,
+        $profile = Profile::create([
+            'full_name' => 'Perdi',
+            'headline' => 'Full-Stack Web Developer & Mahasiswa S1 Informatika',
+            'bio' => 'Mahasiswa S1 Informatika (NPM: 24312212) yang fokus membangun aplikasi web modern menggunakan PHP, Laravel, dan Tailwind CSS.',
+            'photo_url' => 'images/foto.jpg',
+            'cv_url' => null,
+            'email' => 'perdi24312212@gmail.com',
+            'phone' => '085319147609',
+            'location' => 'Bandar Lampung, Indonesia',
+            'github_url' => 'https://github.com/perdi24312212',
+            'linkedin_url' => 'https://linkedin.com/in/perdi-informatika',
+            'instagram_url' => null,
         ]);
 
-        // ----------------------------------------------------------------
-        // 2. Skills (7 skill, kategori bervariasi)
-        // ----------------------------------------------------------------
-        $skills = Skill::insert([
-            ['name' => 'Laravel',         'category' => 'Backend',   'level' => 'Advanced',      'icon' => 'laravel',  'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'PHP OOP',         'category' => 'Backend',   'level' => 'Advanced',      'icon' => 'php',      'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'MySQL',           'category' => 'Database',  'level' => 'Intermediate',  'icon' => 'mysql',    'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Tailwind CSS',    'category' => 'Frontend',  'level' => 'Advanced',      'icon' => 'tailwind', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'JavaScript ES6+', 'category' => 'Frontend',  'level' => 'Intermediate',  'icon' => 'js',       'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Git & GitHub',    'category' => 'Tools',     'level' => 'Intermediate',  'icon' => 'git',      'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'VS Code',         'category' => 'Tools',     'level' => 'Advanced',      'icon' => 'vscode',   'created_at' => now(), 'updated_at' => now()],
-        ]);
+        $html = Skill::create(['name' => 'HTML5', 'category' => 'Frontend', 'level' => 'Advanced', 'icon' => 'html5']);
+        $tailwind = Skill::create(['name' => 'Tailwind CSS', 'category' => 'Frontend', 'level' => 'Advanced', 'icon' => 'tailwind']);
+        $js = Skill::create(['name' => 'JavaScript', 'category' => 'Frontend', 'level' => 'Intermediate', 'icon' => 'javascript']);
+        $php = Skill::create(['name' => 'PHP', 'category' => 'Backend', 'level' => 'Intermediate', 'icon' => 'php']);
+        $laravel = Skill::create(['name' => 'Laravel', 'category' => 'Backend', 'level' => 'Intermediate', 'icon' => 'laravel']);
+        $mysql = Skill::create(['name' => 'MySQL', 'category' => 'Database', 'level' => 'Intermediate', 'icon' => 'mysql']);
+        $git = Skill::create(['name' => 'Git & GitHub', 'category' => 'Tools', 'level' => 'Advanced', 'icon' => 'git']);
 
-        $skillLaravel  = Skill::where('name', 'Laravel')->first();
-        $skillPhp      = Skill::where('name', 'PHP OOP')->first();
-        $skillMysql    = Skill::where('name', 'MySQL')->first();
-        $skillTailwind = Skill::where('name', 'Tailwind CSS')->first();
-        $skillJs       = Skill::where('name', 'JavaScript ES6+')->first();
-        $skillGit      = Skill::where('name', 'Git & GitHub')->first();
-
-        // ----------------------------------------------------------------
-        // 3. Projects (3 project + sync ke skill)
-        // ----------------------------------------------------------------
         $project1 = Project::create([
-            'title'         => 'Sistem Manajemen Kelas & Tugas Online',
-            'slug'          => Str::slug('Sistem Manajemen Kelas & Tugas Online'),
-            'summary'       => 'Aplikasi e-classroom interaktif berbasis Laravel MVC.',
-            'description'   => 'Aplikasi manajemen kelas virtual lengkap dengan arsitektur Class Controller Laravel. Menyediakan fitur manajemen materi, absensi mahasiswa, penugasan otomatis, dan penilaian real-time dengan sistem role Dosen & Mahasiswa.',
+            'title' => 'Aplikasi Portofolio Personal Responsif',
+            'slug' => Str::slug('Aplikasi Portofolio Personal Responsif'),
+            'summary' => 'Portfolio personal responsif dengan desain modern.',
+            'description' => 'Website portofolio personal responsif dengan desain modern, teknologi frontend modern, dan struktur layout yang komunikatif.',
             'thumbnail_url' => null,
-            'demo_url'      => null,
-            'github_url'    => 'https://github.com/perdi24312212/sim-kelas',
-            'is_featured'   => true,
+            'demo_url' => null,
+            'github_url' => 'https://github.com/perdi24312212/portfolio-personal',
+            'is_featured' => true,
         ]);
-        $project1->skills()->sync([
-            $skillLaravel->id,
-            $skillPhp->id,
-            $skillMysql->id,
-            $skillTailwind->id,
-        ]);
+        $project1->skills()->sync([$html->id, $tailwind->id, $js->id]);
 
         $project2 = Project::create([
-            'title'         => 'Aplikasi Point of Sale (POS) & Inventori',
-            'slug'          => Str::slug('Aplikasi Point of Sale POS dan Inventori'),
-            'summary'       => 'Sistem kasir dan manajemen stok untuk UMKM.',
-            'description'   => 'Sistem kasir dan pembukuan stok toko UMKM. Dibuat dengan modul class PHP terstruktur, cetak nota struk otomatis, serta visualisasi grafik penjualan bulanan menggunakan Chart.js.',
+            'title' => 'Sistem Informasi Kasir Sederhana',
+            'slug' => Str::slug('Sistem Informasi Kasir Sederhana'),
+            'summary' => 'Kasir sederhana berbasis web untuk kebutuhan transaksi.',
+            'description' => 'Aplikasi kasir sederhana untuk mengelola transaksi, stok, dan laporan dasar usaha kecil.',
             'thumbnail_url' => null,
-            'demo_url'      => null,
-            'github_url'    => 'https://github.com/perdi24312212/pos-inventori',
-            'is_featured'   => true,
+            'demo_url' => null,
+            'github_url' => 'https://github.com/perdi24312212/kasir-sederhana',
+            'is_featured' => false,
         ]);
-        $project2->skills()->sync([
-            $skillLaravel->id,
-            $skillPhp->id,
-            $skillMysql->id,
-            $skillTailwind->id,
-            $skillJs->id,
-        ]);
+        $project2->skills()->sync([$git->id]);
 
         $project3 = Project::create([
-            'title'         => 'Website Portal Informasi HIMA Informatika',
-            'slug'          => Str::slug('Website Portal Informasi HIMA Informatika'),
-            'summary'       => 'Platform publikasi kegiatan organisasi mahasiswa informatika.',
-            'description'   => 'Platform resmi publikasi kegiatan, artikel teknologi, pendaftaran divisi anggota, dan dokumentasi event HIMA Informatika. Dilengkapi dark/light mode dan desain responsif.',
+            'title' => 'RESTful API Manajemen Pengguna',
+            'slug' => Str::slug('RESTful API Manajemen Pengguna'),
+            'summary' => 'API CRUD pengguna berbasis Laravel dan MySQL.',
+            'description' => 'API RESTful untuk mengelola pengguna dengan autentikasi, validasi, dan data store di MySQL.',
             'thumbnail_url' => null,
-            'demo_url'      => null,
-            'github_url'    => 'https://github.com/perdi24312212/portal-hima',
-            'is_featured'   => false,
+            'demo_url' => null,
+            'github_url' => 'https://github.com/perdi24312212/api-user-management',
+            'is_featured' => true,
         ]);
-        $project3->skills()->sync([
-            $skillLaravel->id,
-            $skillTailwind->id,
-            $skillJs->id,
-            $skillGit->id,
-        ]);
+        $project3->skills()->sync([$php->id, $laravel->id, $mysql->id]);
 
-        // ----------------------------------------------------------------
-        // 4. Experiences (2 pengalaman)
-        // ----------------------------------------------------------------
         Experience::create([
-            'title'        => 'Pengembang Web & Anggota Aktif',
-            'organization' => 'HIMA Informatika',
-            'type'         => 'Organisasi',
-            'start_date'   => '2024-09-01',
-            'end_date'     => null,
-            'is_current'   => true,
-            'description'  => 'Aktif di divisi teknologi, mengembangkan aplikasi kemahasiswaan dan workshop pemrograman dasar.',
+            'title' => 'Mahasiswa S1 Teknik Informatika',
+            'organization' => 'Universitas Lampung',
+            'type' => 'Pendidikan',
+            'start_date' => '2023-09-01',
+            'end_date' => null,
+            'is_current' => true,
+            'description' => 'Menempuh studi S1 Teknik Informatika dengan fokus pada perangkat lunak, database, dan web development.',
         ]);
 
         Experience::create([
-            'title'        => 'S1 Teknik Informatika',
-            'organization' => 'Fakultas Teknik & Ilmu Komputer (FTIK)',
-            'type'         => 'Pendidikan',
-            'start_date'   => '2024-09-01',
-            'end_date'     => null,
-            'is_current'   => true,
-            'description'  => 'NPM: 24312212. Mempelajari Struktur Data, OOP, Rekayasa Perangkat Lunak, Basis Data, dan Arsitektur Web.',
+            'title' => 'Staff Divisi Humas HMIF',
+            'organization' => 'Himpunan Mahasiswa Informatika',
+            'type' => 'Organisasi',
+            'start_date' => '2024-01-10',
+            'end_date' => null,
+            'is_current' => true,
+            'description' => 'Mengelola komunikasi publik, dokumentasi kegiatan, dan publikasi acara organisasi.',
         ]);
 
-        // ----------------------------------------------------------------
-        // 5. Certificate (1 sertifikat)
-        // ----------------------------------------------------------------
         Certificate::create([
-            'title'          => 'Belajar Membuat Aplikasi Web dengan Laravel',
-            'issuer'         => 'Dicoding Indonesia',
-            'issued_date'    => '2024-11-01',
+            'title' => 'Belajar Dasar Pemrograman Web',
+            'issuer' => 'Dicoding Academy',
+            'issued_date' => '2024-03-15',
             'credential_url' => 'https://www.dicoding.com/certificates/',
-            'description'    => 'Sertifikasi pengembangan aplikasi web dengan framework Laravel dari platform Dicoding.',
+            'description' => 'Sertifikat dasar pemrograman web untuk pengembangan frontend dan logika dasar web.',
         ]);
     }
 }

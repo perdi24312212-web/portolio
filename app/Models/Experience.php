@@ -2,26 +2,13 @@
 
 namespace App\Models;
 
-class Experience
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Experience extends Model
 {
-    public static function query(): self
-    {
-        return new self();
-    }
+    use HasFactory;
 
-    public function orderByRaw(string $sql): self
-    {
-        return $this;
-    }
-
-    public function orderBy(string $column, string $direction = 'asc'): self
-    {
-        return $this;
-    }
-
-    public function get(): array
-    {
-        return config('portfolio.experience', []);
-    }
+    protected $guarded = ['id'];
 }
 

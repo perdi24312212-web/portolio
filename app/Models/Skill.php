@@ -2,37 +2,18 @@
 
 namespace App\Models;
 
-class Skill
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Skill extends Model
 {
-    public static function query(): self
+    use HasFactory;
+
+    protected $guarded = ['id'];
+
+    public function projects()
     {
-        return new self();
-    }
-
-    public function orderBy(string $column, string $direction = 'asc'): self
-    {
-        return $this;
-    }
-
-    public function get(): array
-    {
-        $skills = config('portfolio.skills', []);
-        $items = [];
-
-        foreach ($skills as $group => $list) {
-            foreach ($list as $skill) {
-                $items[] = [
-                    'id' => count($items) + 1,
-                    'name' => $skill['name'] ?? '',
-                    'category' => $group,
-                    'icon' => $skill['icon'] ?? strtolower(str_replace(' ', '-', ($skill['name'] ?? 'skill'))),
-                ];
-            }
-        }
-
-        usort($items, fn($a, $b) => [$a['category'], $a['name']] <=> [$b['category'], $b['name']]);
-
-        return $items;
+        return $this->belongsToMany(Project::class, 'project_skill');
     }
 }
 

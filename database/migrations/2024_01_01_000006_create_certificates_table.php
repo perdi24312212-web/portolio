@@ -14,7 +14,7 @@ return new class extends Migration
             $table->string('issuer');
             $table->date('issued_date');
             $table->string('credential_url')->nullable();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
