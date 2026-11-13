@@ -1,0 +1,48 @@
+#!/usr/bin/env php
+<?php
+
+define('LARAVEL_START', microtime(true));
+
+// Cek apakah vendor autoload ada
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    require __DIR__ . '/vendor/autoload.php';
+}
+
+$command = $argv[1] ?? 'help';
+
+if ($command === 'serve') {
+    $host = '127.0.0.1';
+    $port = 8000;
+    
+    // Cek apakah port atau host ditentukan
+    foreach ($argv as $arg) {
+        if (strpos($arg, '--port=') === 0) {
+            $port = substr($arg, 7);
+        }
+        if (strpos($arg, '--host=') === 0) {
+            $host = substr($arg, 7);
+        }
+    }
+
+    echo "\n  Laravel development server started: http://{$host}:{$port}\n";
+    echo "  Portofolio: Perdi (NPM: 24312212) — S1 Informatika\n";
+    echo "  Tekan Ctrl+C untuk menghentikan server.\n\n";
+
+    passthru(PHP_BINARY . " -S {$host}:{$port} -t \"" . __DIR__ . "/public\"");
+    exit(0);
+}
+
+if ($command === 'about' || $command === 'info') {
+    echo "\n  Aplikasi Portofolio Laravel & Tailwind CSS\n";
+    echo "  Nama Pengembang : Perdi\n";
+    echo "  NPM Mahasiswa   : 24312212\n";
+    echo "  Program Studi   : S1 Informatika\n";
+    echo "  Email           : perdi24312212@gmail.com\n";
+    echo "  Telepon / WA    : 085319147609\n\n";
+    exit(0);
+}
+
+echo "\n  Laravel & PHP OOP Console — Perdi (NPM: 24312212)\n\n";
+echo "  Perintah tersedia:\n";
+echo "    php artisan serve          Menjalankan server web lokal (http://127.0.0.1:8000)\n";
+echo "    php artisan about          Menampilkan identitas & konfigurasi portofolio\n\n";

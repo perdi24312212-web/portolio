@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Portfolio: Open in Browser",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://127.0.0.1:8000",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}

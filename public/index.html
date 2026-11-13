@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perdi — Full-Stack Web Developer &amp; Informatics Student (NPM: 24312212)</title>
+    <meta name="description" content="Mahasiswa S1 Informatika (NPM: 24312212) yang berfokus menciptakan aplikasi web modern, performa tinggi, dan antarmuka interaktif menggunakan Laravel, PHP OOP Class, dan Tailwind CSS.">
+    <meta name="author" content="Perdi">
+    <meta property="og:title" content="Perdi — Full-Stack Web Developer &amp; Informatics Student">
+    <meta property="og:description" content="Mahasiswa S1 Informatika (NPM: 24312212) yang berfokus menciptakan aplikasi web modern, performa tinggi, dan antarmuka interaktif menggunakan Laravel, PHP OOP Class, dan Tailwind CSS.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#4f46e5">
+
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            200: '#c7d2fe',
+                            300: '#a5b4fc',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                            900: '#312e81',
+                        },
+                        maroon: {
+                            50: '#fdf2f4',
+                            100: '#fce7eb',
+                            500: '#be123c',
+                            600: '#9f1239',
+                            700: '#881337',
+                            800: '#701a31',
+                            900: '#4c0519',
+                        },
+                        darkbg: '#0a0f1d',
+                        darkcard: '#111827',
+                        darkborder: '#1f293d',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    animation: {
+                        'float-slow': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+                        'gradient-x': 'gradientX 10s ease infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+                            '50%': { opacity: '0.8', transform: 'scale(1.05)' },
+                        },
+                        gradientX: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    
+    <script>
+        (function() {
+            try {
+                const stored = localStorage.getItem('theme');
+                if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased transition-colors duration-300 dark:bg-[#070b14] dark:text-slate-200">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-brand-600 focus:px-4 focus:py-2 focus:text-white focus:shadow-lg">
+        Lewati ke konten
+    </a>
+
+    
+    <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <div class="absolute -top-40 left-1/4 h-[500px] w-[500px] rounded-full bg-brand-500/10 blur-[120px] dark:bg-brand-600/15"></div>
+        <div class="absolute top-1/3 -right-20 h-[450px] w-[450px] rounded-full bg-violet-500/10 blur-[130px] dark:bg-purple-600/15"></div>
+        <div class="absolute bottom-10 left-1/3 h-[500px] w-[500px] rounded-full bg-rose-500/10 blur-[140px] dark:bg-maroon-600/15"></div>
+    </div>
+
+    
+<header class="fixed inset-x-0 top-0 z-40 border-b border-slate-200/80 bg-white/85 backdrop-blur-xl transition-all duration-300 dark:border-slate-800/80 dark:bg-[#070b14]/85">
+    <nav class="mx-auto flex h-20 max-w-6xl items-center justify-between px-6" aria-label="Navigasi utama">
+        
+        <a href="#home" class="group flex items-center gap-3">
+            <div class="flex size-11 items-center justify-center rounded-2xl bg-gradient-to-tr from-brand-600 via-indigo-600 to-violet-600 text-white shadow-md shadow-brand-500/25 transition-transform duration-300 group-hover:scale-105">
+                <span class="font-display text-xl font-black">P</span>
+            </div>
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="font-display text-lg font-extrabold tracking-tight text-slate-900 dark:text-white">
+                        Perdi<span class="text-brand-600 dark:text-brand-400">.dev</span>
+                    </span>
+                    <span class="rounded-md border border-brand-200 bg-brand-50 px-2 py-0.5 text-[10px] font-bold text-brand-700 dark:border-brand-500/30 dark:bg-brand-500/10 dark:text-brand-300">
+                        NPM 24312212                    </span>
+                </div>
+                <p class="text-[11px] font-medium text-slate-500 dark:text-slate-400">S1 Informatika · Web Dev</p>
+            </div>
+        </a>
+
+        
+        <ul class="hidden items-center gap-1 rounded-full border border-slate-200/80 bg-slate-100/70 p-1.5 backdrop-blur md:flex dark:border-slate-800 dark:bg-slate-900/70">
+                            <li>
+                    <a href="#about" data-nav
+                       class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-all duration-200 hover:text-brand-600 dark:text-slate-300 dark:hover:text-white">
+                        Tentang                    </a>
+                </li>
+                            <li>
+                    <a href="#skills" data-nav
+                       class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-all duration-200 hover:text-brand-600 dark:text-slate-300 dark:hover:text-white">
+                        Keahlian                    </a>
+                </li>
+                            <li>
+                    <a href="#projects" data-nav
+                       class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-all duration-200 hover:text-brand-600 dark:text-slate-300 dark:hover:text-white">
+                        Proyek                    </a>
+                </li>
+                            <li>
+                    <a href="#experience" data-nav
+                       class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-all duration-200 hover:text-brand-600 dark:text-slate-300 dark:hover:text-white">
+                        Perjalanan                    </a>
+                </li>
+                            <li>
+                    <a href="#contact" data-nav
+                       class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-all duration-200 hover:text-brand-600 dark:text-slate-300 dark:hover:text-white">
+                        Kontak                    </a>
+                </li>
+                    </ul>
+
+        
+        <div class="flex items-center gap-3">
+            
+            <button type="button" data-theme-toggle aria-label="Ganti tema"
+                    class="flex size-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 shadow-sm transition hover:border-brand-400 hover:text-brand-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-brand-500 dark:hover:text-brand-400">
+                <svg class="hidden size-5 dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364-1.414 1.414M7.05 16.95l-1.414 1.414m12.728 0-1.414-1.414M7.05 7.05 5.636 5.636M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg>
+                <svg class="size-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 0 1 8.646 3.646 9.003 9.003 0 0 0 12 21a9.003 9.003 0 0 0 8.354-5.646z"/></svg>
+            </button>
+
+            
+            <a href="https://wa.me/6285319147609" target="_blank" rel="noopener noreferrer"
+               class="hidden items-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 px-4 py-2.5 text-xs font-bold text-white shadow-md shadow-brand-500/25 transition-all hover:scale-105 hover:shadow-lg sm:inline-flex">
+                <span>Hubungi</span>
+                <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0-4 4m4-4H3"/></svg>
+            </a>
+
+            
+            <button id="menu-btn" type="button" aria-label="Buka navigasi" aria-expanded="false" aria-controls="mobile-menu"
+                    class="flex size-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 md:hidden dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200">
+                <svg id="menu-icon-open" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg id="menu-icon-close" class="hidden size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    
+    <div id="mobile-menu" class="hidden border-b border-slate-200 bg-white/95 px-6 py-5 backdrop-blur-xl md:hidden dark:border-slate-800 dark:bg-[#0a0f1d]/95">
+        <div class="mb-4 flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+            <div>
+                <p class="font-display text-sm font-bold text-slate-900 dark:text-white">Perdi</p>
+                <p class="text-xs text-brand-600 dark:text-brand-400">NPM: 24312212 · S1 Informatika</p>
+            </div>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300">
+                <span class="size-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                Tersedia
+            </span>
+        </div>
+        <ul class="space-y-1">
+                            <li>
+                    <a href="#about" class="flex items-center justify-between rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-brand-50 hover:text-brand-600 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-brand-400">
+                        <span>Tentang</span>
+                        <svg class="size-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </li>
+                            <li>
+                    <a href="#skills" class="flex items-center justify-between rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-brand-50 hover:text-brand-600 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-brand-400">
+                        <span>Keahlian</span>
+                        <svg class="size-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </li>
+                            <li>
+                    <a href="#projects" class="flex items-center justify-between rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-brand-50 hover:text-brand-600 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-brand-400">
+                        <span>Proyek</span>
+                        <svg class="size-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </li>
+                            <li>
+                    <a href="#experience" class="flex items-center justify-between rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-brand-50 hover:text-brand-600 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-brand-400">
+                        <span>Perjalanan</span>
+                        <svg class="size-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </li>
+                            <li>
+                    <a href="#contact" class="flex items-center justify-between rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-brand-50 hover:text-brand-600 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-brand-400">
+                        <span>Kontak</span>
+                        <svg class="size-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </li>
+                    </ul>
+        <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 flex gap-2">
+            <a href="https://wa.me/6285319147609" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2.5 text-xs font-bold text-white bg-emerald-600 rounded-xl shadow">
+                WhatsApp
+            </a>
+            <a href="mailto:perdi24312212@gmail.com" class="flex-1 text-center py-2.5 text-xs font-bold text-slate-800 dark:text-white bg-slate-100 dark:bg-slate-800 rounded-xl">
+                Email
+            </a>
+        </div>
+    </div>
+</header>
+
+
+
+    <main id="main">
+        
+    <section id="home" class="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28">
+    
+    <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+        <div class="absolute -top-32 left-1/2 h-[420px] w-[600px] -translate-x-1/2 rounded-full bg-gradient-to-tr from-brand-600/25 via-violet-600/20 to-maroon-600/20 blur-3xl dark:from-brand-600/20 dark:via-violet-600/15 dark:to-maroon-600/15"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)]"></div>
+    </div>
+
+    <div class="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-[1.2fr_0.8fr]">
+        
+        <div class="reveal order-2 lg:order-1">
+            
+            <div class="flex flex-wrap items-center gap-3">
+                <span class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50/90 px-3.5 py-1 text-xs font-bold text-brand-700 shadow-sm backdrop-blur dark:border-brand-500/30 dark:bg-brand-500/10 dark:text-brand-300">
+                    <span class="size-2 rounded-full bg-brand-600 animate-ping"></span>
+                    S1 Informatika · NPM 24312212                </span>
+
+                                    <span class="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50/90 px-3 py-1 text-xs font-semibold text-emerald-700 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-300">
+                        <span class="relative flex size-2">
+                            <span class="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                            <span class="relative inline-flex size-2 rounded-full bg-emerald-500"></span>
+                        </span>
+                        Terbuka untuk Kolaborasi
+                    </span>
+                            </div>
+
+            
+            <h1 class="mt-6 font-display text-4xl font-black leading-tight tracking-tight text-slate-900 sm:text-6xl dark:text-white">
+                Halo, saya <br class="hidden sm:inline">
+                <span class="bg-gradient-to-r from-brand-600 via-indigo-600 to-violet-500 bg-clip-text text-transparent dark:from-brand-400 dark:via-indigo-300 dark:to-violet-400">
+                    Perdi                </span>
+            </h1>
+
+            
+            <p class="mt-3 font-display text-xl font-bold text-slate-700 sm:text-2xl dark:text-slate-200">
+                Full-Stack Web Developer &amp; Mahasiswa Informatika
+            </p>
+
+            
+            <p class="mt-4 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">
+                Fokus membangun aplikasi web modern yang bersih dan berkinerja tinggi menggunakan arsitektur 
+                <span class="font-semibold text-brand-600 dark:text-brand-400">PHP OOP Class</span>, 
+                framework <span class="font-semibold text-indigo-600 dark:text-indigo-400">Laravel</span>, dan 
+                antarmuka responsif dengan <span class="font-semibold text-violet-600 dark:text-violet-400">Tailwind CSS</span>.
+            </p>
+
+            
+            <div class="mt-6 flex flex-wrap items-center gap-2 text-xs font-mono">
+                <button type="button" data-copy="24312212" title="Klik untuk salin NPM"
+                        class="copy-pill inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700 shadow-sm transition hover:border-brand-400 hover:text-brand-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">
+                    <span class="text-slate-400 font-sans">NPM:</span>
+                    <span class="font-bold">24312212</span>
+                    <svg class="size-3.5 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                </button>
+
+                <button type="button" data-copy="perdi24312212@gmail.com" title="Klik untuk salin Email"
+                        class="copy-pill inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700 shadow-sm transition hover:border-brand-400 hover:text-brand-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">
+                    <span class="text-slate-400 font-sans">Email:</span>
+                    <span class="font-bold">perdi24312212@gmail.com</span>
+                    <svg class="size-3.5 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                </button>
+
+                <button type="button" data-copy="085319147609" title="Klik untuk salin Telepon"
+                        class="copy-pill inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-slate-700 shadow-sm transition hover:border-brand-400 hover:text-brand-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">
+                    <span class="text-slate-400 font-sans">Telp:</span>
+                    <span class="font-bold">085319147609</span>
+                    <svg class="size-3.5 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                </button>
+            </div>
+
+            
+            <div class="mt-8 flex flex-wrap items-center gap-3">
+                <a href="#projects" class="btn-primary">
+                    <span>Lihat Proyek</span>
+                    <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0-4 4m4-4H3"/></svg>
+                </a>
+                <a href="https://wa.me/6285319147609" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+                    <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.102-.115.434-.506.549-.68.116-.173.232-.144.39-.086.159.058 1.011.477 1.184.564.173.086.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="#contact" class="btn-outline">
+                    <span>Hubungi Saya</span>
+                </a>
+            </div>
+
+            
+            <dl class="mt-10 grid grid-cols-2 gap-4 border-t border-slate-200/80 pt-8 sm:grid-cols-4 dark:border-slate-800">
+                                    <div class="rounded-xl border border-slate-200/70 bg-white/70 p-3.5 backdrop-blur dark:border-slate-800 dark:bg-slate-900/60">
+                        <dt class="font-display text-2xl font-black text-slate-900 sm:text-3xl dark:text-white">24312212</dt>
+                        <dd class="mt-1 text-xs font-medium text-slate-500 dark:text-slate-400">NPM Mahasiswa</dd>
+                    </div>
+                                    <div class="rounded-xl border border-slate-200/70 bg-white/70 p-3.5 backdrop-blur dark:border-slate-800 dark:bg-slate-900/60">
+                        <dt class="font-display text-2xl font-black text-slate-900 sm:text-3xl dark:text-white">15+</dt>
+                        <dd class="mt-1 text-xs font-medium text-slate-500 dark:text-slate-400">Proyek &amp; Eksplorasi</dd>
+                    </div>
+                                    <div class="rounded-xl border border-slate-200/70 bg-white/70 p-3.5 backdrop-blur dark:border-slate-800 dark:bg-slate-900/60">
+                        <dt class="font-display text-2xl font-black text-slate-900 sm:text-3xl dark:text-white">10+</dt>
+                        <dd class="mt-1 text-xs font-medium text-slate-500 dark:text-slate-400">Tech Stack Dikuasai</dd>
+                    </div>
+                                    <div class="rounded-xl border border-slate-200/70 bg-white/70 p-3.5 backdrop-blur dark:border-slate-800 dark:bg-slate-900/60">
+                        <dt class="font-display text-2xl font-black text-slate-900 sm:text-3xl dark:text-white">100%</dt>
+                        <dd class="mt-1 text-xs font-medium text-slate-500 dark:text-slate-400">Komitmen &amp; Antusiasme</dd>
+                    </div>
+                            </dl>
+        </div>
+
+        
+        <div class="reveal order-1 mx-auto w-full max-w-sm lg:order-2">
+            <div class="relative">
+                
+                <div class="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-tr from-brand-600 via-violet-600 to-rose-600 opacity-40 blur-2xl animate-pulse" aria-hidden="true"></div>
+                <div class="absolute -inset-1 rounded-[2.5rem] bg-gradient-to-br from-brand-500 via-indigo-500 to-violet-600 opacity-70" aria-hidden="true"></div>
+
+                
+                <figure class="relative overflow-hidden rounded-[2.2rem] border-2 border-white/80 bg-slate-900 shadow-2xl dark:border-slate-700">
+                    <img src="images/foto.jpg" alt="Foto Perdi — NPM 24312212"
+                         width="960" height="1280" fetchpriority="high"
+                         class="aspect-[3/4] w-full object-cover object-top transition-transform duration-700 hover:scale-105">
+                    
+                    
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent p-6 pt-20">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <figcaption class="font-display text-xl font-bold text-white">Perdi</figcaption>
+                                <p class="text-xs font-semibold text-brand-300">NPM: 24312212</p>
+                            </div>
+                            <span class="rounded-lg bg-white/10 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur">
+                                Informatika '24
+                            </span>
+                        </div>
+                    </div>
+                </figure>
+
+                
+                <div class="absolute -top-4 -right-4 hidden rounded-2xl border border-slate-200 bg-white/95 px-4 py-3 shadow-xl backdrop-blur transition hover:scale-105 sm:flex items-center gap-3 dark:border-slate-700 dark:bg-slate-900/95">
+                    <div class="flex size-9 items-center justify-center rounded-xl bg-brand-50 text-brand-600 dark:bg-brand-500/10 dark:text-brand-400">
+                        🎓
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Status Mahasiswa</p>
+                        <p class="font-display text-xs font-black text-slate-900 dark:text-white">S1 Informatika</p>
+                    </div>
+                </div>
+
+                
+                <div class="absolute -left-6 bottom-16 hidden rounded-2xl border border-slate-200 bg-white/95 px-4 py-3 shadow-xl backdrop-blur transition hover:scale-105 sm:flex items-center gap-3 dark:border-slate-700 dark:bg-slate-900/95">
+                    <div class="flex size-9 items-center justify-center rounded-xl bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-400">
+                        ⚡
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Arsitektur</p>
+                        <p class="font-display text-xs font-black text-slate-900 dark:text-white">Laravel &amp; Tailwind</p>
+                    </div>
+                </div>
+
+                
+                <div class="absolute -right-4 -bottom-4 hidden rounded-2xl border border-slate-200 bg-white/95 px-3.5 py-2.5 shadow-xl backdrop-blur transition hover:scale-105 sm:flex items-center gap-2 dark:border-slate-700 dark:bg-slate-900/95">
+                    <span class="size-2 rounded-full bg-rose-500 animate-ping"></span>
+                    <p class="text-xs font-bold text-slate-800 dark:text-slate-200">🏛️ HIMA Informatika</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section id="about" class="py-20 sm:py-28">
+    <div class="mx-auto max-w-6xl px-6">
+        <div class="reveal grid gap-14 lg:grid-cols-[0.85fr_1.15fr]">
+            
+            <div>
+                <p class="section-eyebrow">Tentang Saya</p>
+                <h2 class="section-title">
+                    Mengubah ide &amp; kebutuhan menjadi aplikasi web yang bernilai.
+                </h2>
+
+                <p class="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">
+                    Halo! Nama saya <strong class="text-slate-900 dark:text-white">Perdi</strong>, mahasiswa program studi S1 Informatika angkatan 2024 dengan <strong class="text-brand-600 dark:text-brand-400">NPM 24312212</strong>.
+                </p>
+
+                
+                <div class="mt-8 space-y-4">
+                    <div class="group flex items-start gap-4 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm transition-all hover:border-brand-500/50 hover:shadow-md dark:border-slate-800 dark:bg-slate-900/60">
+                        <div class="flex size-11 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-xl text-brand-600 dark:bg-brand-500/10 dark:text-brand-400">
+                            💻
+                        </div>
+                        <div>
+                            <h3 class="font-display text-sm font-bold text-slate-900 dark:text-white">Arsitektur Berbasis PHP Class</h3>
+                            <p class="mt-1 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
+                                Menerapkan prinsip Object-Oriented Programming (OOP) yang bersih: Controller Classes, Model, dan Service Layer di Laravel.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="group flex items-start gap-4 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm transition-all hover:border-violet-500/50 hover:shadow-md dark:border-slate-800 dark:bg-slate-900/60">
+                        <div class="flex size-11 shrink-0 items-center justify-center rounded-xl bg-violet-50 text-xl text-violet-600 dark:bg-violet-500/10 dark:text-violet-400">
+                            🎨
+                        </div>
+                        <div>
+                            <h3 class="font-display text-sm font-bold text-slate-900 dark:text-white">Tailwind CSS &amp; Desain Modern</h3>
+                            <p class="mt-1 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
+                                Mengembangkan layout responsif, tema gelap/terang, tipografi presisi, dan animasi antarmuka yang memikat.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="group flex items-start gap-4 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm transition-all hover:border-rose-500/50 hover:shadow-md dark:border-slate-800 dark:bg-slate-900/60">
+                        <div class="flex size-11 shrink-0 items-center justify-center rounded-xl bg-rose-50 text-xl text-rose-600 dark:bg-rose-500/10 dark:text-rose-400">
+                            🏛️
+                        </div>
+                        <div>
+                            <h3 class="font-display text-sm font-bold text-slate-900 dark:text-white">HIMA Informatika &amp; Kolaborasi</h3>
+                            <p class="mt-1 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
+                                Terlatih dalam manajemen proyek, kolaborasi tim pengembang, serta riset implementasi teknologi baru.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="space-y-6">
+                <div class="card !p-8">
+                    <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">
+                        Profil &amp; Dedikasi
+                    </h3>
+
+                    <div class="mt-4 space-y-4 text-base leading-relaxed text-slate-600 dark:text-slate-300">
+                                                    <p>Saya adalah seorang mahasiswa program studi S1 Informatika angkatan 2024 dengan NPM 24312212. Saya memiliki minat mendalam pada pengembangan aplikasi web, perancangan basis data, dan arsitektur sistem berbasis Object-Oriented Programming (OOP Class) dengan Framework Laravel.</p>
+                                                    <p>Aktif dalam organisasi kemahasiswaan HIMA Informatika, saya terbiasa berkolaborasi dalam tim, memecahkan masalah komputasi, serta mengeksplorasi teknologi web mutakhir seperti Tailwind CSS, REST API, dan ekosistem modern Laravel.</p>
+                                                    <p>Saya berdedikasi untuk selalu menulis kode yang rapi, terstruktur, mudah di-maintenance, dan menghadirkan pengalaman pengguna (UI/UX) yang intuitif dan berestetika tinggi.</p>
+                                            </div>
+
+                    
+                    <div class="mt-8 grid gap-4 border-t border-slate-200/80 pt-6 sm:grid-cols-2 dark:border-slate-800">
+                        <div class="flex items-center justify-between rounded-xl bg-slate-50 p-3.5 dark:bg-slate-800/50">
+                            <div>
+                                <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Nama Lengkap</span>
+                                <p class="text-sm font-bold text-slate-900 dark:text-white">Perdi</p>
+                            </div>
+                            <span class="text-xs text-brand-600 dark:text-brand-400 font-bold">Mahasiswa</span>
+                        </div>
+
+                        <div class="flex items-center justify-between rounded-xl bg-slate-50 p-3.5 dark:bg-slate-800/50">
+                            <div>
+                                <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">NPM</span>
+                                <p class="font-mono text-sm font-bold text-slate-900 dark:text-white">24312212</p>
+                            </div>
+                            <button type="button" data-copy="24312212" class="text-xs font-semibold text-brand-600 hover:underline dark:text-brand-400">
+                                Salin
+                            </button>
+                        </div>
+
+                        <div class="flex items-center justify-between rounded-xl bg-slate-50 p-3.5 dark:bg-slate-800/50">
+                            <div>
+                                <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Program Studi</span>
+                                <p class="text-sm font-bold text-slate-900 dark:text-white">S1 Informatika</p>
+                            </div>
+                            <span class="text-xs text-slate-500">Angkatan 2024</span>
+                        </div>
+
+                        <div class="flex items-center justify-between rounded-xl bg-slate-50 p-3.5 dark:bg-slate-800/50">
+                            <div>
+                                <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Lokasi</span>
+                                <p class="text-sm font-bold text-slate-900 dark:text-white">Bandar Lampung, Indonesia</p>
+                            </div>
+                            <span class="text-xs text-emerald-600 font-semibold">Lampung</span>
+                        </div>
+
+                        <div class="flex items-center justify-between rounded-xl bg-slate-50 p-3.5 sm:col-span-2 dark:bg-slate-800/50">
+                            <div class="truncate mr-2">
+                                <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Email</span>
+                                <p class="text-sm font-bold text-slate-900 truncate dark:text-white">perdi24312212@gmail.com</p>
+                            </div>
+                            <button type="button" data-copy="perdi24312212@gmail.com" class="shrink-0 rounded-lg bg-brand-50 px-3 py-1.5 text-xs font-semibold text-brand-700 transition hover:bg-brand-100 dark:bg-brand-500/10 dark:text-brand-300">
+                                Salin Email
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section id="skills" class="relative bg-slate-100/60 py-20 sm:py-28 dark:bg-slate-900/30">
+    <div class="mx-auto max-w-6xl px-6">
+        <div class="reveal mb-14 max-w-2xl">
+            <p class="section-eyebrow">Keahlian &amp; Kompetensi</p>
+            <h2 class="section-title">Teknologi &amp; Fondasi yang Dikuasai</h2>
+            <p class="mt-4 text-base text-slate-600 dark:text-slate-400">
+                Kombinasi pemahaman arsitektur backend berorientasi objek (Class &amp; Laravel) dan kemahiran mendesain antarmuka modern dengan Tailwind CSS.
+            </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-3">
+                            <div class="card reveal flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-4 dark:border-slate-800">
+                            <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white">Backend &amp; Architecture</h3>
+                            <span class="rounded-full bg-brand-50 px-2.5 py-0.5 text-xs font-bold text-brand-700 dark:bg-brand-500/10 dark:text-brand-300">
+                                4 Skill
+                            </span>
+                        </div>
+
+                        <ul class="mt-6 space-y-6">
+                                                            <li class="group">
+                                    <div class="mb-1.5 flex items-center justify-between text-sm">
+                                        <div class="flex items-center gap-2">
+                                            <span class="font-bold text-slate-900 transition-colors group-hover:text-brand-600 dark:text-slate-200 dark:group-hover:text-brand-400">
+                                                Laravel Framework                                            </span>
+                                        </div>
+                                        <span class="font-mono text-xs font-bold text-brand-600 dark:text-brand-400">88%</span>
+                                    </div>
+
+                                    
+                                    <div class="h-2 w-full overflow-hidden rounded-full bg-slate-200/70 dark:bg-slate-800" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Laravel Framework">
+                                        <div class="h-full rounded-full bg-gradient-to-r from-brand-600 via-indigo-500 to-violet-500 transition-all duration-1000 ease-out" style="width: 88%"></div>
+                                    </div>
+
+                                                                            <p class="mt-1.5 text-[11px] leading-tight text-slate-500 dark:text-slate-400">
+                                            Routing, MVC, Eloquent ORM, Blade, Middleware, Auth                                        </p>
+                                                                    </li>
+                                                            <li class="group">
+                                    <div class="mb-1.5 flex items-center justify-between text-sm">
+                                        <div class="flex items-center gap-2">
+                                            <span class="font-bold text-slate-900 transition-colors group-hover:text-brand-600 dark:text-slate-200 dark:group-hover:text-brand-400">
+                                                PHP OOP &amp; Classes                                            </span>
+                                        </div>
+                                        <span class="font-mono text-xs font-bold text-brand-600 dark:text-brand-400">85%</span>
+                                    </div>
+
+                                    
+                                    <div class="h-2 w-full overflow-hidden rounded-full bg-slate-200/70 dark:bg-slate-800" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="PHP OOP &amp; Classes">
+                                        <div class="h-full rounded-full bg-gradient-to-r from-brand-600 via-indigo-500 to-violet-500 transition-all duration-1000 ease-out" style="width: 85%"></div>
+                                    </div>
+
+                                                                            <p class="mt-1.5 text-[11px] leading-tight text-slate-500 dark:text-slate-400">
+                                            Object Oriented, Clean Code, Controller Classes, Service Layer                                        </p>
+                                                                    </li>
+                                                            <li class="group">
+                                    <div class="mb-1.5 flex items-center justify-between text-sm">
+                                        <div class="flex items-center gap-2">
+                                            <span class="font-bold text-slate-900 transition-colors group-hover:text-brand-600 dark:text-slate-200 dark:group-hover:text-brand-400">
+                                                MySQL Database                                            </span>
+                                        </div>
+                                        <span class="font-mono text-xs font-bold text-brand-600 dark:text-brand-400">82%</span>
+                                    </div>
+
+                                    
+                                    <div class="h-2 w-full overflow-hidden rounded-full bg-slate-200/70 dark:bg-slate-800" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="MySQL Database">
+                                        <div class="h-full rounded-full bg-gradient-to-r from-brand-600 via-indigo-500 to-violet-500 transition-all duration-1000 ease-out" style="width: 82%"></div>
+                                    </div>
+
+                                                                            <p class="mt-1.5 text-[11px] leading-tight text-slate-500 dark:text-slate-400">
+                                            Schema Design, Relasi, Query Optimization, Migrations                                        </p>
+                                                                    </li>
+                                                            <li class="group">
+                                    <div class="mb-1.5 flex items-center justify-between text-sm">
+                                        <div class="flex items-center gap-2">
+                                            <span class="font-bold text-slate-900 transition-colors group-hover:text-brand-600 dark:text-slate-200 dark:group-hover:text-brand-400">
+                                                RESTful API                                            </span>
+                                        </div>
+                                        <span class="font-mono text-xs font-bold text-brand-600 dark:text-brand-400">80%</span>
+                                    </div>
+
+                                    
+                                    <div class="h-2 w-full overflow-hidden rounded-full bg-slate-200/70 dark:bg-slate-800" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="RESTful API">
+                                        <div class="h-full rounded-full bg-gradient-to-r from-brand-600 via-indigo-500 to-violet-500 transition-all duration-1000 ease-out" style="width: 80%"></div>
+                                    </div>
+
+                                                                            <p class="mt-1.5 text-[11px] leading-tight text-slate-500 dark:text-slate-400">
+                                            JSON Endpoints, API Auth, Postman Testing, Integrasi Client                                        </p>
+                                                                    </li>
+                                                    </ul>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-100 text-[11px] text-slate-400 text-center dark:border-slate-800">
+                        Teruji dalam praktikum &amp; proyek nyata
+                    </div>
+                </div>
+                            <div class="card reveal flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-4 dark:border-slate-800">
+                            <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white">Frontend &amp; UI/UX</h3>
+                            <span class="rounded-full bg-brand-50 px-2.5 py-0.5 text-xs font-bold text-brand-700 dark:bg-brand-500/10 dark:text-brand-300">
+                                4 Skill
+                            </span>
+                        </div>
+
+                        <ul class="mt-6 space-y-6">
+                                                            <li class="group">
+                                    <div class="mb-1.5 flex items-center justify-between text-sm">
+                                        <div class="flex items-center gap-2">
+                                            <span class="font-bold text-slate-900 transition-colors group-hover:text-brand-600 dark:text-slate-200 dark:group-hover:text-brand-400">
+                                                Tailwind CSS                                            </span>
+                                        </div>
+                                        <span class="font-mono text-xs font-bold text-brand-600 dark:text-brand-400">92%</span>
+                                    </div>
+
+                                    
+                                    <div class="h-2 w-full overflow-hidden rounded-full bg-slate-200/70 dark:bg-slate-800" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="Tailwind CSS">
+                                        <div class="h-full rounded-full bg-gradient-to-r from-brand-600 via-indigo-500 to-violet-500 transition-all duration-1000 ease-out" style="width: 92%"></div>
+                                    </div>
+
+                                                                            <p class="mt-1.5 text-[11px] leading-tight text-slate-500 dark:text-slate-400">
+                                            Utility-First, Responsive Design, Dark Mode, Custom Themes                                        </p>
+                                                                    </li>
+                                                            <li class="group">
+                                    <div class="mb-1.5 flex items-center justify-between text-sm">
+                                        <div class="flex items-center gap-2">
+                                            <span class="font-bold text-slate-900 transition-colors group-hover:text-brand-600 dark:text-slate-200 dark:group-hover:text-brand-400">
+                                                JavaScript (ES6+)                                            </span>
+                                        </div>
+                                        <span class="font-mono text-xs font-bold text-brand-600 dark:text-brand-400">78%</span>
+                                    </div>
+
+                                    
+                                    <div class="h-2 w-full overflow-hidden rounded-full bg-slate-200/70 dark:bg-slate-800" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript (ES6+)">
+                                        <div class="h-full rounded-full bg-gradient-to-r from-brand-600 via-indigo-500 to-violet-500 transition-all duration-1000 ease-out" style="width: 78%"></div>
+                                    </div>
+
+                                                                            <p class="mt-1.5 text-[11px] leading-tight text-slate-500 dark:text-slate-400">
+                                            DOM Manipulation, Fetch API, Async/Await, Micro-interactions                                        </p>
+                                                                    </li>
+                                                            <li class="group">
+                                    <div class="mb-1.5 flex items-center justify-between text-sm">
+                                        <div class="flex items-center gap-2">
+                                            <span class="font-bold text-slate-900 transition-colors group-hover:text-brand-600 dark:text-slate-200 dark:group-hover:text-brand-400">
+                                                Blade Templating                                            </span>
+                                        </div>
+                                        <span class="font-mono text-xs font-bold text-brand-600 dark:text-brand-400">88%</span>
+                                    </div>
+
+                                    
+                                    <div class="h-2 w-full overflow-hidden rounded-full bg-slate-200/70 dark:bg-slate-800" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Blade Templating">
+                                        <div class="h-full rounded-full bg-gradient-to-r from-brand-600 via-indigo-500 to-violet-500 transition-all duration-1000 ease-out" style="width: 88%"></div>
+                                    </div>
+
+                                                                            <p class="mt-1.5 text-[11px] leading-tight text-slate-500 dark:text-slate-400">
+                                            Components, Directives, Layouts, Dynamic Rendering                                        </p>
+                                                                    </li>
+                                                            <li class="group">
+                                    <div class="mb-1.5 flex items-center justify-between text-sm">
+                                        <div class="flex items-center gap-2">
+                                            <span class="font-bold text-slate-900 transition-colors group-hover:text-brand-600 dark:text-slate-200 dark:group-hover:text-brand-400">
+                                                Responsive UI Design                                            </span>
+                                        </div>
+                                        <span class="font-mono text-xs font-bold text-brand-600 dark:text-brand-400">85%</span>
+                                    </div>
+
+                                    
+                                    <div class="h-2 w-full overflow-hidden rounded-full bg-slate-200/70 dark:bg-slate-800" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Responsive UI Design">
+                                        <div class="h-full rounded-full bg-gradient-to-r from-brand-600 via-indigo-500 to-violet-500 transition-all duration-1000 ease-out" style="width: 85%"></div>
+                                    </div>
+
+                                                                            <p class="mt-1.5 text-[11px] leading-tight text-slate-500 dark:text-slate-400">
+                                            Mobile First, Glassmorphism, Micro-animations, Accessibility                                        </p>
+                                                                    </li>
+                                                    </ul>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-100 text-[11px] text-slate-400 text-center dark:border-slate-800">
+                        Teruji dalam praktikum &amp; proyek nyata
+                    </div>
+                </div>
+                            <div class="card reveal flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-4 dark:border-slate-800">
+                            <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white">Tools &amp; Lingkungan Kerja</h3>
+                            <span class="rounded-full bg-brand-50 px-2.5 py-0.5 text-xs font-bold text-brand-700 dark:bg-brand-500/10 dark:text-brand-300">
+                                4 Skill
+                            </span>
+                        </div>
+
+                        <ul class="mt-6 space-y-6">
+                                                            <li class="group">
+                                    <div class="mb-1.5 flex items-center justify-between text-sm">
+                                        <div class="flex items-center gap-2">
+                                            <span class="font-bold text-slate-900 transition-colors group-hover:text-brand-600 dark:text-slate-200 dark:group-hover:text-brand-400">
+                                                Git &amp; GitHub                                            </span>
+                                        </div>
+                                        <span class="font-mono text-xs font-bold text-brand-600 dark:text-brand-400">82%</span>
+                                    </div>
+
+                                    
+                                    <div class="h-2 w-full overflow-hidden rounded-full bg-slate-200/70 dark:bg-slate-800" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="Git &amp; GitHub">
+                                        <div class="h-full rounded-full bg-gradient-to-r from-brand-600 via-indigo-500 to-violet-500 transition-all duration-1000 ease-out" style="width: 82%"></div>
+                                    </div>
+
+                                                                            <p class="mt-1.5 text-[11px] leading-tight text-slate-500 dark:text-slate-400">
+                                            Version Control, Branching, Pull Requests, Repository Collab                                        </p>
+                                                                    </li>
+                                                            <li class="group">
+                                    <div class="mb-1.5 flex items-center justify-between text-sm">
+                                        <div class="flex items-center gap-2">
+                                            <span class="font-bold text-slate-900 transition-colors group-hover:text-brand-600 dark:text-slate-200 dark:group-hover:text-brand-400">
+                                                XAMPP &amp; Apache                                            </span>
+                                        </div>
+                                        <span class="font-mono text-xs font-bold text-brand-600 dark:text-brand-400">90%</span>
+                                    </div>
+
+                                    
+                                    <div class="h-2 w-full overflow-hidden rounded-full bg-slate-200/70 dark:bg-slate-800" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="XAMPP &amp; Apache">
+                                        <div class="h-full rounded-full bg-gradient-to-r from-brand-600 via-indigo-500 to-violet-500 transition-all duration-1000 ease-out" style="width: 90%"></div>
+                                    </div>
+
+                                                                            <p class="mt-1.5 text-[11px] leading-tight text-slate-500 dark:text-slate-400">
+                                            Local Server Setup, Virtual Hosts, PHP Configuration                                        </p>
+                                                                    </li>
+                                                            <li class="group">
+                                    <div class="mb-1.5 flex items-center justify-between text-sm">
+                                        <div class="flex items-center gap-2">
+                                            <span class="font-bold text-slate-900 transition-colors group-hover:text-brand-600 dark:text-slate-200 dark:group-hover:text-brand-400">
+                                                VS Code &amp; Extensions                                            </span>
+                                        </div>
+                                        <span class="font-mono text-xs font-bold text-brand-600 dark:text-brand-400">92%</span>
+                                    </div>
+
+                                    
+                                    <div class="h-2 w-full overflow-hidden rounded-full bg-slate-200/70 dark:bg-slate-800" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="VS Code &amp; Extensions">
+                                        <div class="h-full rounded-full bg-gradient-to-r from-brand-600 via-indigo-500 to-violet-500 transition-all duration-1000 ease-out" style="width: 92%"></div>
+                                    </div>
+
+                                                                            <p class="mt-1.5 text-[11px] leading-tight text-slate-500 dark:text-slate-400">
+                                            Productive workflow, Blade Snippets, Linter, GitLens                                        </p>
+                                                                    </li>
+                                                            <li class="group">
+                                    <div class="mb-1.5 flex items-center justify-between text-sm">
+                                        <div class="flex items-center gap-2">
+                                            <span class="font-bold text-slate-900 transition-colors group-hover:text-brand-600 dark:text-slate-200 dark:group-hover:text-brand-400">
+                                                Figma &amp; UI Prototype                                            </span>
+                                        </div>
+                                        <span class="font-mono text-xs font-bold text-brand-600 dark:text-brand-400">75%</span>
+                                    </div>
+
+                                    
+                                    <div class="h-2 w-full overflow-hidden rounded-full bg-slate-200/70 dark:bg-slate-800" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Figma &amp; UI Prototype">
+                                        <div class="h-full rounded-full bg-gradient-to-r from-brand-600 via-indigo-500 to-violet-500 transition-all duration-1000 ease-out" style="width: 75%"></div>
+                                    </div>
+
+                                                                            <p class="mt-1.5 text-[11px] leading-tight text-slate-500 dark:text-slate-400">
+                                            Wireframing, High-fidelity Layouts, Color Systems                                        </p>
+                                                                    </li>
+                                                    </ul>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-100 text-[11px] text-slate-400 text-center dark:border-slate-800">
+                        Teruji dalam praktikum &amp; proyek nyata
+                    </div>
+                </div>
+                    </div>
+    </div>
+</section>
+
+
+    
+<section id="projects" class="py-20 sm:py-28">
+    <div class="mx-auto max-w-6xl px-6">
+        
+        <div class="reveal mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div class="max-w-2xl">
+                <p class="section-eyebrow">Portofolio Karya</p>
+                <h2 class="section-title">Proyek Unggulan &amp; Eksplorasi</h2>
+                <p class="mt-3 text-slate-600 dark:text-slate-400">
+                    Aplikasi web nyata yang dibangun menggunakan arsitektur Laravel Controller Class, clean OOP, dan Tailwind CSS.
+                </p>
+            </div>
+
+            
+            <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                <button type="button" data-filter="all" class="filter-btn active rounded-full bg-brand-600 px-4 py-2 text-white shadow-md shadow-brand-500/25 transition">
+                    Semua (4)
+                </button>
+                                    <button type="button" data-filter="Laravel"
+                            class="filter-btn rounded-full border border-slate-300 bg-white px-4 py-2 text-slate-700 transition hover:border-brand-500 hover:text-brand-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:text-white">
+                        Laravel                    </button>
+                                    <button type="button" data-filter="Tailwind CSS"
+                            class="filter-btn rounded-full border border-slate-300 bg-white px-4 py-2 text-slate-700 transition hover:border-brand-500 hover:text-brand-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:text-white">
+                        Tailwind CSS                    </button>
+                                    <button type="button" data-filter="PHP OOP"
+                            class="filter-btn rounded-full border border-slate-300 bg-white px-4 py-2 text-slate-700 transition hover:border-brand-500 hover:text-brand-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:text-white">
+                        PHP OOP                    </button>
+                                    <button type="button" data-filter="MySQL"
+                            class="filter-btn rounded-full border border-slate-300 bg-white px-4 py-2 text-slate-700 transition hover:border-brand-500 hover:text-brand-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:text-white">
+                        MySQL                    </button>
+                            </div>
+        </div>
+
+        
+        <div class="grid gap-8 md:grid-cols-2">
+                            <article data-tags="Laravel|PHP OOP|Tailwind CSS|MySQL"
+                         class="card reveal group flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-500/50 hover:shadow-xl dark:hover:border-brand-500/40">
+                    <div>
+                        
+                        <div class="relative mb-6 aspect-video overflow-hidden rounded-xl bg-gradient-to-br from-slate-900 via-brand-950 to-slate-900 p-6 flex flex-col justify-between border border-slate-800">
+                            
+                            <div class="absolute inset-0 bg-[radial-gradient(#4f46e5_1px,transparent_1px)] [background-size:16px_16px] opacity-25"></div>
+                            
+                            <div class="relative z-10 flex items-center justify-between">
+                                <span class="rounded-full bg-brand-500/20 px-3 py-1 text-xs font-bold text-brand-300 backdrop-blur border border-brand-500/30">
+                                    Laravel MVC Class                                </span>
+                                <span class="font-mono text-2xl font-black text-white/30">
+                                    01                                </span>
+                            </div>
+
+
+                            <div class="relative z-10">
+                                <div class="inline-flex items-center gap-2 rounded-lg bg-black/40 px-3 py-1.5 backdrop-blur border border-white/10 text-xs font-mono text-slate-200">
+                                    <span class="size-2 rounded-full bg-emerald-400"></span>
+                                    <span>Class / Controller MVC</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="flex items-center justify-between text-xs text-brand-600 dark:text-brand-400 font-bold mb-1">
+                            <span>Web App</span>
+                            <span class="text-slate-400 font-mono">Perdi · 24312212</span>
+                        </div>
+
+                        <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                            Sistem Manajemen Kelas &amp; Tugas Online                        </h3>
+
+                        <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                            Aplikasi e-classroom interaktif dengan arsitektur Class Controller Laravel. Menyediakan fitur manajemen materi, absensi mahasiswa, penugasan otomatis, dan penilaian real-time.                        </p>
+
+                        
+                                                    <div class="mt-4 rounded-xl bg-slate-50 p-3.5 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800">
+                                <p class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">Fitur Utama:</p>
+                                <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                                                                            <li class="flex items-center gap-2">
+                                            <span class="text-brand-600 dark:text-brand-400">✓</span>
+                                            <span>Sistem Autentikasi Role (Dosen &amp; Mahasiswa)</span>
+                                        </li>
+                                                                            <li class="flex items-center gap-2">
+                                            <span class="text-brand-600 dark:text-brand-400">✓</span>
+                                            <span>Upload &amp; Validasi Tugas File</span>
+                                        </li>
+                                                                            <li class="flex items-center gap-2">
+                                            <span class="text-brand-600 dark:text-brand-400">✓</span>
+                                            <span>Dashboard Statistik Nilai</span>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                                            </div>
+
+                    
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <ul class="flex flex-wrap gap-1.5 mb-5">
+                                                            <li class="rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                                    Laravel                                </li>
+                                                            <li class="rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                                    PHP OOP                                </li>
+                                                            <li class="rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                                    Tailwind CSS                                </li>
+                                                            <li class="rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                                    MySQL                                </li>
+                                                    </ul>
+
+                        <div class="flex items-center justify-between text-xs font-bold">
+                            <a href="https://github.com/perdi24312212/sim-kelas" target="_blank" rel="noopener noreferrer"
+                               class="inline-flex items-center gap-1.5 text-slate-700 hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-400 transition">
+                                <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                <span>Source Code</span>
+                            </a>
+
+                            <button type="button" data-project-modal="sim-kelas"
+                                    class="inline-flex items-center gap-1 text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:underline">
+                                <span>Pratinjau Modul</span>
+                                <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                            <article data-tags="Laravel|Tailwind CSS|MySQL|Chart.js"
+                         class="card reveal group flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-500/50 hover:shadow-xl dark:hover:border-brand-500/40">
+                    <div>
+                        
+                        <div class="relative mb-6 aspect-video overflow-hidden rounded-xl bg-gradient-to-br from-slate-900 via-brand-950 to-slate-900 p-6 flex flex-col justify-between border border-slate-800">
+                            
+                            <div class="absolute inset-0 bg-[radial-gradient(#4f46e5_1px,transparent_1px)] [background-size:16px_16px] opacity-25"></div>
+                            
+                            <div class="relative z-10 flex items-center justify-between">
+                                <span class="rounded-full bg-brand-500/20 px-3 py-1 text-xs font-bold text-brand-300 backdrop-blur border border-brand-500/30">
+                                    Full-Stack                                </span>
+                                <span class="font-mono text-2xl font-black text-white/30">
+                                    02                                </span>
+                            </div>
+
+
+                            <div class="relative z-10">
+                                <div class="inline-flex items-center gap-2 rounded-lg bg-black/40 px-3 py-1.5 backdrop-blur border border-white/10 text-xs font-mono text-slate-200">
+                                    <span class="size-2 rounded-full bg-emerald-400"></span>
+                                    <span>Class / Controller MVC</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="flex items-center justify-between text-xs text-brand-600 dark:text-brand-400 font-bold mb-1">
+                            <span>Web App</span>
+                            <span class="text-slate-400 font-mono">Perdi · 24312212</span>
+                        </div>
+
+                        <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                            Aplikasi Point of Sale (POS) &amp; Inventori                        </h3>
+
+                        <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                            Sistem kasir dan pembukuan stok toko UMKM. Dibuat dengan modul class PHP terstruktur, cetak nota struk otomatis, serta visualisasi grafik penjualan bulanan.                        </p>
+
+                        
+                                                    <div class="mt-4 rounded-xl bg-slate-50 p-3.5 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800">
+                                <p class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">Fitur Utama:</p>
+                                <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                                                                            <li class="flex items-center gap-2">
+                                            <span class="text-brand-600 dark:text-brand-400">✓</span>
+                                            <span>Transaksi Kasir Kilat (Scan/Cari)</span>
+                                        </li>
+                                                                            <li class="flex items-center gap-2">
+                                            <span class="text-brand-600 dark:text-brand-400">✓</span>
+                                            <span>Laporan Keuntungan &amp; Rugi</span>
+                                        </li>
+                                                                            <li class="flex items-center gap-2">
+                                            <span class="text-brand-600 dark:text-brand-400">✓</span>
+                                            <span>Export Data Excel &amp; PDF</span>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                                            </div>
+
+                    
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <ul class="flex flex-wrap gap-1.5 mb-5">
+                                                            <li class="rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                                    Laravel                                </li>
+                                                            <li class="rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                                    Tailwind CSS                                </li>
+                                                            <li class="rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                                    MySQL                                </li>
+                                                            <li class="rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                                    Chart.js                                </li>
+                                                    </ul>
+
+                        <div class="flex items-center justify-between text-xs font-bold">
+                            <a href="https://github.com/perdi24312212/pos-inventori" target="_blank" rel="noopener noreferrer"
+                               class="inline-flex items-center gap-1.5 text-slate-700 hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-400 transition">
+                                <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                <span>Source Code</span>
+                            </a>
+
+                            <button type="button" data-project-modal="pos-kasir"
+                                    class="inline-flex items-center gap-1 text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:underline">
+                                <span>Pratinjau Modul</span>
+                                <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                            <article data-tags="Laravel|Tailwind CSS|Blade|Responsive"
+                         class="card reveal group flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-500/50 hover:shadow-xl dark:hover:border-brand-500/40">
+                    <div>
+                        
+                        <div class="relative mb-6 aspect-video overflow-hidden rounded-xl bg-gradient-to-br from-slate-900 via-brand-950 to-slate-900 p-6 flex flex-col justify-between border border-slate-800">
+                            
+                            <div class="absolute inset-0 bg-[radial-gradient(#4f46e5_1px,transparent_1px)] [background-size:16px_16px] opacity-25"></div>
+                            
+                            <div class="relative z-10 flex items-center justify-between">
+                                <span class="rounded-full bg-brand-500/20 px-3 py-1 text-xs font-bold text-brand-300 backdrop-blur border border-brand-500/30">
+                                    Organisasi                                </span>
+                                <span class="font-mono text-2xl font-black text-white/30">
+                                    03                                </span>
+                            </div>
+
+
+                            <div class="relative z-10">
+                                <div class="inline-flex items-center gap-2 rounded-lg bg-black/40 px-3 py-1.5 backdrop-blur border border-white/10 text-xs font-mono text-slate-200">
+                                    <span class="size-2 rounded-full bg-emerald-400"></span>
+                                    <span>Class / Controller MVC</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="flex items-center justify-between text-xs text-brand-600 dark:text-brand-400 font-bold mb-1">
+                            <span>Portal</span>
+                            <span class="text-slate-400 font-mono">Perdi · 24312212</span>
+                        </div>
+
+                        <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                            Website Portal Informasi HIMA Informatika                        </h3>
+
+                        <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                            Platform resmi publikasi kegiatan, artikel teknologi, pendaftaran divisi anggota, dan dokumentasi event organisasi Himpunan Mahasiswa Informatika.                        </p>
+
+                        
+                                                    <div class="mt-4 rounded-xl bg-slate-50 p-3.5 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800">
+                                <p class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">Fitur Utama:</p>
+                                <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                                                                            <li class="flex items-center gap-2">
+                                            <span class="text-brand-600 dark:text-brand-400">✓</span>
+                                            <span>Desain Beridentitas Almamater</span>
+                                        </li>
+                                                                            <li class="flex items-center gap-2">
+                                            <span class="text-brand-600 dark:text-brand-400">✓</span>
+                                            <span>Formulir Registrasi Online</span>
+                                        </li>
+                                                                            <li class="flex items-center gap-2">
+                                            <span class="text-brand-600 dark:text-brand-400">✓</span>
+                                            <span>Dark &amp; Light Theme Mode</span>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                                            </div>
+
+                    
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <ul class="flex flex-wrap gap-1.5 mb-5">
+                                                            <li class="rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                                    Laravel                                </li>
+                                                            <li class="rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                                    Tailwind CSS                                </li>
+                                                            <li class="rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                                    Blade                                </li>
+                                                            <li class="rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                                    Responsive                                </li>
+                                                    </ul>
+
+                        <div class="flex items-center justify-between text-xs font-bold">
+                            <a href="https://github.com/perdi24312212/portal-hima" target="_blank" rel="noopener noreferrer"
+                               class="inline-flex items-center gap-1.5 text-slate-700 hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-400 transition">
+                                <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                <span>Source Code</span>
+                            </a>
+
+                            <button type="button" data-project-modal="portal-hima"
+                                    class="inline-flex items-center gap-1 text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:underline">
+                                <span>Pratinjau Modul</span>
+                                <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                            <article data-tags="PHP OOP|Laravel|Tailwind CSS|JavaScript"
+                         class="card reveal group flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-500/50 hover:shadow-xl dark:hover:border-brand-500/40">
+                    <div>
+                        
+                        <div class="relative mb-6 aspect-video overflow-hidden rounded-xl bg-gradient-to-br from-slate-900 via-brand-950 to-slate-900 p-6 flex flex-col justify-between border border-slate-800">
+                            
+                            <div class="absolute inset-0 bg-[radial-gradient(#4f46e5_1px,transparent_1px)] [background-size:16px_16px] opacity-25"></div>
+                            
+                            <div class="relative z-10 flex items-center justify-between">
+                                <span class="rounded-full bg-brand-500/20 px-3 py-1 text-xs font-bold text-brand-300 backdrop-blur border border-brand-500/30">
+                                    Real-time                                </span>
+                                <span class="font-mono text-2xl font-black text-white/30">
+                                    04                                </span>
+                            </div>
+
+
+                            <div class="relative z-10">
+                                <div class="inline-flex items-center gap-2 rounded-lg bg-black/40 px-3 py-1.5 backdrop-blur border border-white/10 text-xs font-mono text-slate-200">
+                                    <span class="size-2 rounded-full bg-emerald-400"></span>
+                                    <span>Class / Controller MVC</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="flex items-center justify-between text-xs text-brand-600 dark:text-brand-400 font-bold mb-1">
+                            <span>Service</span>
+                            <span class="text-slate-400 font-mono">Perdi · 24312212</span>
+                        </div>
+
+                        <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                            Sistem Antrean Layanan Akademik Kampus                        </h3>
+
+                        <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                            Aplikasi antrean loket pelayanan mahasiswa terintegrasi dengan pemanggilan nomor otomatis, layar display antrean, dan estimasi waktu tunggu.                        </p>
+
+                        
+                                                    <div class="mt-4 rounded-xl bg-slate-50 p-3.5 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800">
+                                <p class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">Fitur Utama:</p>
+                                <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                                                                            <li class="flex items-center gap-2">
+                                            <span class="text-brand-600 dark:text-brand-400">✓</span>
+                                            <span>Display Monitor Loket Antrean</span>
+                                        </li>
+                                                                            <li class="flex items-center gap-2">
+                                            <span class="text-brand-600 dark:text-brand-400">✓</span>
+                                            <span>Voice Audio Calling Notification</span>
+                                        </li>
+                                                                            <li class="flex items-center gap-2">
+                                            <span class="text-brand-600 dark:text-brand-400">✓</span>
+                                            <span>Audit Trail Log Pelayanan</span>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                                            </div>
+
+                    
+                    <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800">
+                        <ul class="flex flex-wrap gap-1.5 mb-5">
+                                                            <li class="rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                                    PHP OOP                                </li>
+                                                            <li class="rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                                    Laravel                                </li>
+                                                            <li class="rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                                    Tailwind CSS                                </li>
+                                                            <li class="rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                                    JavaScript                                </li>
+                                                    </ul>
+
+                        <div class="flex items-center justify-between text-xs font-bold">
+                            <a href="https://github.com/perdi24312212/sistem-antrean" target="_blank" rel="noopener noreferrer"
+                               class="inline-flex items-center gap-1.5 text-slate-700 hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-400 transition">
+                                <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                <span>Source Code</span>
+                            </a>
+
+                            <button type="button" data-project-modal="antrean-layanan"
+                                    class="inline-flex items-center gap-1 text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:underline">
+                                <span>Pratinjau Modul</span>
+                                <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                    </div>
+    </div>
+</section>
+
+
+    <section id="experience" class="bg-slate-100/60 py-20 sm:py-28 dark:bg-slate-900/30">
+    <div class="mx-auto max-w-6xl px-6">
+        <div class="reveal mb-14 max-w-2xl">
+            <p class="section-eyebrow">Rekam Jejak</p>
+            <h2 class="section-title">Pendidikan, Organisasi &amp; Pengalaman</h2>
+            <p class="mt-3 text-slate-600 dark:text-slate-400">
+                Perjalanan akademik di program studi S1 Informatika dan keikutsertaan aktif dalam organisasi kemahasiswaan serta pengembangan web.
+            </p>
+        </div>
+
+        <div class="grid gap-12 lg:grid-cols-2">
+                            <div class="reveal">
+                    <div class="mb-8 flex items-center gap-3">
+                        <span class="flex size-9 items-center justify-center rounded-xl bg-brand-50 text-base text-brand-600 dark:bg-brand-500/10 dark:text-brand-400">
+                            🎓                        </span>
+                        <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">Pendidikan Akademik</h3>
+                    </div>
+
+
+                    <ol class="relative space-y-8 border-l-2 border-brand-500/30 pl-8 ml-3 dark:border-brand-500/20">
+                                                    <li class="relative">
+                                
+                                <span class="absolute -left-[41px] top-1 flex size-5 items-center justify-center rounded-full bg-brand-600 text-[10px] text-white shadow-md shadow-brand-500/50">
+                                    <span class="size-2 rounded-full bg-white"></span>
+                                </span>
+
+                                <div class="card !p-5 transition hover:border-brand-500/40 hover:shadow-md">
+                                    <div class="flex flex-wrap items-center justify-between gap-2">
+                                        <span class="rounded-full bg-brand-50 px-2.5 py-0.5 text-[11px] font-bold text-brand-700 dark:bg-brand-500/10 dark:text-brand-300">
+                                            2024 - Sekarang                                        </span>
+                                                                                    <span class="text-xs text-slate-400">📍 Bandar Lampung, Indonesia</span>
+                                                                            </div>
+
+                                    <h4 class="mt-2.5 font-display text-base font-bold text-slate-900 dark:text-white">
+                                        S1 Teknik Informatika                                    </h4>
+
+                                    <p class="text-xs font-semibold text-brand-600 dark:text-brand-400">
+                                        Fakultas Teknik &amp; Ilmu Komputer (FTIK)                                    </p>
+
+                                    <p class="mt-2 text-xs leading-relaxed text-slate-600 dark:text-slate-400">
+                                        NPM: 24312212. Mempelajari Struktur Data, Pemrograman Berorientasi Objek (OOP Class), Rekayasa Perangkat Lunak, Basis Data, dan Arsitektur Web Modern.                                    </p>
+                                </div>
+                            </li>
+                                            </ol>
+                </div>
+                            <div class="reveal">
+                    <div class="mb-8 flex items-center gap-3">
+                        <span class="flex size-9 items-center justify-center rounded-xl bg-brand-50 text-base text-brand-600 dark:bg-brand-500/10 dark:text-brand-400">
+                            💼                        </span>
+                        <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">Organisasi &amp; Pengalaman</h3>
+                    </div>
+
+
+                    <ol class="relative space-y-8 border-l-2 border-brand-500/30 pl-8 ml-3 dark:border-brand-500/20">
+                                                    <li class="relative">
+                                
+                                <span class="absolute -left-[41px] top-1 flex size-5 items-center justify-center rounded-full bg-brand-600 text-[10px] text-white shadow-md shadow-brand-500/50">
+                                    <span class="size-2 rounded-full bg-white"></span>
+                                </span>
+
+                                <div class="card !p-5 transition hover:border-brand-500/40 hover:shadow-md">
+                                    <div class="flex flex-wrap items-center justify-between gap-2">
+                                        <span class="rounded-full bg-brand-50 px-2.5 py-0.5 text-[11px] font-bold text-brand-700 dark:bg-brand-500/10 dark:text-brand-300">
+                                            2024 - Sekarang                                        </span>
+                                                                                    <span class="text-xs text-slate-400">📍 Bandar Lampung</span>
+                                                                            </div>
+
+                                    <h4 class="mt-2.5 font-display text-base font-bold text-slate-900 dark:text-white">
+                                        Pengembang Web &amp; Anggota Aktif                                    </h4>
+
+                                    <p class="text-xs font-semibold text-brand-600 dark:text-brand-400">
+                                        HIMA Informatika (Himpunan Mahasiswa Informatika)                                    </p>
+
+                                    <p class="mt-2 text-xs leading-relaxed text-slate-600 dark:text-slate-400">
+                                        Berpartisipasi aktif dalam divisi teknologi dan riset. Mengembangkan aplikasi penunjang kegiatan kemahasiswaan dan workshop pemrograman dasar.                                    </p>
+                                </div>
+                            </li>
+                                                    <li class="relative">
+                                
+                                <span class="absolute -left-[41px] top-1 flex size-5 items-center justify-center rounded-full bg-brand-600 text-[10px] text-white shadow-md shadow-brand-500/50">
+                                    <span class="size-2 rounded-full bg-white"></span>
+                                </span>
+
+                                <div class="card !p-5 transition hover:border-brand-500/40 hover:shadow-md">
+                                    <div class="flex flex-wrap items-center justify-between gap-2">
+                                        <span class="rounded-full bg-brand-50 px-2.5 py-0.5 text-[11px] font-bold text-brand-700 dark:bg-brand-500/10 dark:text-brand-300">
+                                            2024 - Sekarang                                        </span>
+                                                                                    <span class="text-xs text-slate-400">📍 Remote / Bandar Lampung</span>
+                                                                            </div>
+
+                                    <h4 class="mt-2.5 font-display text-base font-bold text-slate-900 dark:text-white">
+                                        Freelance Web Developer &amp; Projects                                    </h4>
+
+                                    <p class="text-xs font-semibold text-brand-600 dark:text-brand-400">
+                                        Studi Mandiri &amp; Klien Lokal                                    </p>
+
+                                    <p class="mt-2 text-xs leading-relaxed text-slate-600 dark:text-slate-400">
+                                        Mengerjakan pembuatan website profil, portal administrasi data, dan sistem informasi berbasis framework Laravel serta Tailwind CSS.                                    </p>
+                                </div>
+                            </li>
+                                            </ol>
+                </div>
+                    </div>
+    </div>
+</section>
+
+
+    <section id="contact" class="py-20 sm:py-28">
+    <div class="mx-auto max-w-6xl px-6">
+        <div class="reveal grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+            
+            <div>
+                <p class="section-eyebrow">Hubungi Saya</p>
+                <h2 class="section-title">Mari Berdiskusi &amp; Berkolaborasi</h2>
+                <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">
+                    Tertarik mengembangkan proyek aplikasi web dengan Laravel &amp; Tailwind CSS, atau ingin berdiskusi seputar dunia informatika? Silakan hubungi saya melalui jalur di bawah ini.
+                </p>
+
+                
+                <div class="mt-8 space-y-3.5">
+                    
+                    <div class="card !p-4 flex items-center justify-between transition hover:border-brand-500/40">
+                        <div class="flex items-center gap-3.5 truncate mr-2">
+                            <div class="flex size-10 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600 dark:bg-brand-500/10 dark:text-brand-400">
+                                ✉️
+                            </div>
+                            <div class="truncate">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Email Resmi</span>
+                                <a href="mailto:perdi24312212@gmail.com" class="block truncate text-sm font-bold text-slate-900 hover:text-brand-600 dark:text-white dark:hover:text-brand-400">
+                                    perdi24312212@gmail.com                                </a>
+                            </div>
+                        </div>
+                        <button type="button" data-copy="perdi24312212@gmail.com" title="Salin Email"
+                                class="shrink-0 rounded-lg border border-slate-200 bg-white px-2.5 py-1.5 text-xs font-semibold text-slate-700 transition hover:border-brand-500 hover:text-brand-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">
+                            Salin
+                        </button>
+                    </div>
+
+                    
+                    <div class="card !p-4 flex items-center justify-between transition hover:border-emerald-500/40">
+                        <div class="flex items-center gap-3.5">
+                            <div class="flex size-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400">
+                                💬
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">WhatsApp / Telepon</span>
+                                <a href="https://wa.me/6285319147609" target="_blank" rel="noopener noreferrer" class="block text-sm font-bold text-slate-900 hover:text-emerald-600 dark:text-white">
+                                    085319147609                                </a>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/6285319147609?text=Halo%20Perdi%2C%20saya%20tertarik%20berdiskusi%20dengan%20Anda" target="_blank" rel="noopener noreferrer"
+                           class="shrink-0 rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-bold text-white shadow-sm transition hover:bg-emerald-700">
+                            Chat WA
+                        </a>
+                    </div>
+
+                    
+                    <div class="card !p-4 flex items-center gap-3.5">
+                        <div class="flex size-10 shrink-0 items-center justify-center rounded-xl bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-400">
+                            🎓
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Identitas Akademik</span>
+                            <p class="text-sm font-bold text-slate-900 dark:text-white">
+                                Perdi · NPM: <span class="font-mono text-brand-600 dark:text-brand-400">24312212</span>
+                            </p>
+                            <p class="text-xs text-slate-500">S1 Informatika — Bandar Lampung</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="card !p-8 shadow-xl">
+                <div class="mb-6 flex items-center justify-between border-b border-slate-100 pb-4 dark:border-slate-800">
+                    <div>
+                        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white">Kirim Pesan Langsung</h3>
+                        <p class="text-xs text-slate-500">Formulir tervalidasi dengan proteksi Anti-Spam</p>
+                    </div>
+                    <span class="rounded-full bg-brand-50 px-3 py-1 text-xs font-mono font-bold text-brand-600 dark:bg-brand-500/10 dark:text-brand-400">
+                        Laravel POST
+                    </span>
+                </div>
+
+                
+                <form id="contact-form" method="POST" action="./index.php?action=contact" class="space-y-4">
+                    <input type="hidden" name="_token" value="standalone-token">
+                    
+                    <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        <div>
+                            <label for="name" class="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">Nama Anda</label>
+                            <input id="name" name="name" type="text" value="" required class="field" placeholder="Masukkan nama Anda">
+                            
+                        </div>
+                        <div>
+                            <label for="email" class="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">Email Anda</label>
+                            <input id="email" name="email" type="email" value="" required class="field" placeholder="nama@email.com">
+                            
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="subject" class="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">Subjek Diskusi</label>
+                        <input id="subject" name="subject" type="text" value="" class="field" placeholder="Contoh: Kolaborasi Proyek / Pertanyaan">
+                        
+                    </div>
+
+                    <div>
+                        <label for="message" class="mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">Pesan</label>
+                        <textarea id="message" name="message" rows="4" required class="field" placeholder="Tuliskan pesan atau kebutuhan Anda di sini..."></textarea>
+                        
+                    </div>
+
+                    <div class="flex flex-col gap-3 pt-2 sm:flex-row">
+                        <button type="submit" id="submit-contact" class="btn-primary flex-1">
+                            <span>Kirim Pesan</span>
+                            <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                        </button>
+
+                        <button type="button" id="send-wa-quick" class="btn-whatsapp flex-1">
+                            <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.102-.115.434-.506.549-.68.116-.173.232-.144.39-.086.159.058 1.011.477 1.184.564.173.086.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+                            <span>Kirim ke WhatsApp</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    
+<div id="project-modal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-slate-950/70 p-4 backdrop-blur-sm sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="flex min-h-full items-center justify-center">
+        <div class="relative w-full max-w-2xl rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl transition-all dark:border-slate-800 dark:bg-slate-900 sm:p-8">
+            
+            <button type="button" id="modal-close" aria-label="Tutup modal"
+                    class="absolute top-5 right-5 flex size-9 items-center justify-center rounded-xl border border-slate-200 text-slate-500 hover:border-slate-400 hover:text-slate-900 dark:border-slate-800 dark:text-slate-400 dark:hover:text-white">
+                <svg class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+
+            <div class="flex items-center gap-2 mb-2">
+                <span id="modal-badge" class="rounded-full bg-brand-50 px-3 py-1 text-xs font-bold text-brand-700 dark:bg-brand-500/10 dark:text-brand-300">
+                    Laravel MVC Class
+                </span>
+                <span class="text-xs text-slate-400 font-mono">Perdi · 24312212</span>
+            </div>
+
+            <h3 id="modal-title" class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+                Judul Proyek
+            </h3>
+
+            <p id="modal-desc" class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                Deskripsi proyek.
+            </p>
+
+            
+            <div class="mt-6 rounded-xl bg-slate-950 p-4 font-mono text-xs text-slate-300 border border-slate-800">
+                <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800 text-slate-400">
+                    <span class="flex items-center gap-1.5">
+                        <span class="size-2.5 rounded-full bg-rose-500"></span>
+                        <span class="size-2.5 rounded-full bg-amber-500"></span>
+                        <span class="size-2.5 rounded-full bg-emerald-500"></span>
+                        <span class="ml-2 text-[11px] font-sans">app/Http/Controllers/PerdiController.php</span>
+                    </span>
+                    <span class="text-[10px] text-brand-400">PHP 8 Class</span>
+                </div>
+                <pre class="overflow-x-auto text-[11px] leading-relaxed"><code class="text-indigo-300">&lt;?php</code>
+<span class="text-purple-400">namespace</span> App\Http\Controllers;
+
+<span class="text-purple-400">class</span> <span class="text-yellow-300">ProjectController</span> <span class="text-purple-400">extends</span> Controller {
+    <span class="text-purple-400">public function</span> <span class="text-blue-400">index</span>() {
+        <span class="text-slate-400">// Modul dibuat oleh Perdi (NPM: 24312212)</span>
+        <span class="text-purple-400">return</span> view(<span class="text-emerald-300">'projects.show'</span>, [
+            <span class="text-emerald-300">'framework'</span> => <span class="text-emerald-300">'Laravel + Tailwind CSS'</span>
+        ]);
+    }
+}</pre>
+            </div>
+
+            
+            <div class="mt-6">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Fitur &amp; Kemampuan:</h4>
+                <ul id="modal-features" class="space-y-2 text-xs text-slate-700 dark:text-slate-300">
+                    
+                </ul>
+            </div>
+
+            
+            <div class="mt-8 flex flex-wrap gap-3 pt-4 border-t border-slate-100 dark:border-slate-800">
+                <a id="modal-repo" href="#" target="_blank" rel="noopener noreferrer"
+                   class="btn-primary flex-1 text-center justify-center">
+                    <span>Lihat Repository GitHub</span>
+                    <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <button type="button" id="modal-close-btn" class="btn-outline">
+                    Tutup
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </main>
+
+    <footer class="border-t border-slate-200/80 bg-white py-12 transition-colors dark:border-slate-800/80 dark:bg-[#070b14]">
+    <div class="mx-auto max-w-6xl px-6">
+        <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+            
+            <div class="text-center sm:text-left">
+                <a href="#home" class="font-display text-lg font-extrabold text-slate-900 dark:text-white">
+                    Perdi<span class="text-brand-600 dark:text-brand-400">.dev</span>
+                </a>
+                <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+                    Mahasiswa S1 Informatika (NPM: <span class="font-mono text-brand-600 dark:text-brand-400 font-semibold">24312212</span>) · Web Developer
+                </p>
+            </div>
+
+            
+            <div class="flex flex-wrap items-center justify-center gap-2 text-[11px] font-semibold text-slate-500">
+                <span class="rounded-lg bg-slate-100 px-2.5 py-1 dark:bg-slate-800 dark:text-slate-300">PHP OOP Class</span>
+                <span class="rounded-lg bg-brand-50 px-2.5 py-1 text-brand-700 dark:bg-brand-500/10 dark:text-brand-300">Laravel MVC</span>
+                <span class="rounded-lg bg-violet-50 px-2.5 py-1 text-violet-700 dark:bg-violet-500/10 dark:text-violet-300">Tailwind CSS</span>
+            </div>
+
+            
+            <div class="text-center sm:text-right">
+                <a href="#home" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 hover:underline dark:text-brand-400">
+                    <span>Kembali ke atas</span>
+                    <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 dark:border-slate-800/80">
+            <p>&copy; 2026 Perdi (NPM: 24312212). Hak Cipta Dilindungi.</p>
+            <p class="mt-2 sm:mt-0">Himpunan Mahasiswa Informatika · Bandar Lampung</p>
+        </div>
+    </div>
+</footer>
+
+
+
+    
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-center gap-3">
+        <button id="scroll-to-top" type="button" aria-label="Kembali ke atas"
+                class="hidden size-11 items-center justify-center rounded-full border border-slate-200 bg-white/90 text-slate-700 shadow-lg backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-brand-500 hover:text-brand-600 dark:border-slate-800 dark:bg-slate-900/90 dark:text-slate-300 dark:hover:text-brand-400">
+            <svg class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+        </button>
+
+        <a href="https://wa.me/6285319147609?text=Halo%20Perdi%2C%20saya%20melihat%20portofolio%20web%20Anda" target="_blank" rel="noopener noreferrer"
+           aria-label="Chat WhatsApp"
+           class="group relative flex size-12 items-center justify-center rounded-full bg-emerald-500 text-white shadow-lg shadow-emerald-500/30 transition-all duration-300 hover:scale-110 hover:bg-emerald-600">
+            <span class="absolute -top-1 -right-1 flex size-3.5">
+                <span class="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex size-3.5 rounded-full bg-emerald-300"></span>
+            </span>
+            <svg class="size-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.102-.115.434-.506.549-.68.116-.173.232-.144.39-.086.159.058 1.011.477 1.184.564.173.086.289.13.332.202.043.072.043.419-.101.824z"/>
+            </svg>
+            <span class="pointer-events-none absolute right-14 whitespace-nowrap rounded-lg bg-slate-900 px-2.5 py-1 text-xs font-semibold text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 dark:bg-slate-800">
+                Hubungi Perdi
+            </span>
+        </a>
+    </div>
+
+    
+    <div id="toast-container" class="fixed top-20 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
+
