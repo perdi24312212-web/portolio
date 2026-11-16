@@ -2,9 +2,9 @@
     <div class="mx-auto max-w-6xl px-6">
         <div class="reveal mb-14 max-w-2xl">
             <p class="section-eyebrow">Keahlian &amp; Kompetensi</p>
-            <h2 class="section-title">Teknologi &amp; Fondasi yang Dikuasai</h2>
+            <h2 class="section-title">Teknologi yang Saya Gunakan</h2>
             <p class="mt-4 text-base text-slate-600 dark:text-slate-400">
-                Kombinasi pemahaman arsitektur backend berorientasi objek (Class &amp; Laravel) dan kemahiran mendesain antarmuka modern dengan Tailwind CSS.
+                Ringkasan teknologi dan area yang saya pelajari serta gunakan dalam pengembangan web.
             </p>
         </div>
 
@@ -21,23 +21,12 @@
 
                         <ul class="mt-6 space-y-6">
                             @foreach ($items as $skill)
-                                <li class="group">
-                                    <div class="mb-1.5 flex items-center justify-between text-sm">
-                                        <div class="flex items-center gap-2">
-                                            <span class="font-bold text-slate-900 transition-colors group-hover:text-brand-600 dark:text-slate-200 dark:group-hover:text-brand-400">
-                                                {{ $skill['name'] }}
-                                            </span>
-                                        </div>
-                                        <span class="font-mono text-xs font-bold text-brand-600 dark:text-brand-400">{{ $skill['level'] }}%</span>
-                                    </div>
-
-                                    {{-- Animated Progress Bar --}}
-                                    <div class="h-2 w-full overflow-hidden rounded-full bg-slate-200/70 dark:bg-slate-800" role="progressbar" aria-valuenow="{{ $skill['level'] }}" aria-valuemin="0" aria-valuemax="100" aria-label="{{ $skill['name'] }}">
-                                        <div class="h-full rounded-full bg-gradient-to-r from-brand-600 via-indigo-500 to-violet-500 transition-all duration-1000 ease-out" style="width: {{ $skill['level'] }}%"></div>
-                                    </div>
-
+                                <li class="group border-b border-slate-100 pb-4 last:border-0 last:pb-0 dark:border-slate-800">
+                                    <span class="font-bold text-slate-900 transition-colors group-hover:text-brand-600 dark:text-slate-200 dark:group-hover:text-brand-400">
+                                        {{ $skill['name'] }}
+                                    </span>
                                     @if (!empty($skill['desc']))
-                                        <p class="mt-1.5 text-[11px] leading-tight text-slate-500 dark:text-slate-400">
+                                        <p class="mt-1.5 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
                                             {{ $skill['desc'] }}
                                         </p>
                                     @endif
@@ -47,7 +36,7 @@
                     </div>
 
                     <div class="mt-6 pt-4 border-t border-slate-100 text-[11px] text-slate-400 text-center dark:border-slate-800">
-                        Teruji dalam praktikum &amp; proyek nyata
+                        Terus belajar dan mengembangkan kemampuan
                     </div>
                 </div>
             @endforeach

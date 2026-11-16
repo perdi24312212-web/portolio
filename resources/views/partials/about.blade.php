@@ -5,11 +5,11 @@
             <div>
                 <p class="section-eyebrow">Tentang Saya</p>
                 <h2 class="section-title">
-                    Mengubah ide &amp; kebutuhan menjadi aplikasi web yang bernilai.
+                    Mengembangkan solusi web dengan fokus pada kebutuhan pengguna.
                 </h2>
 
                 <p class="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">
-                    Halo! Nama saya <strong class="text-slate-900 dark:text-white">{{ $p['name'] }}</strong>, mahasiswa program studi S1 Informatika angkatan 2024 dengan <strong class="text-brand-600 dark:text-brand-400">NPM {{ $p['npm'] }}</strong>.
+                    Saya <strong class="text-slate-900 dark:text-white">{{ $p['name'] }}</strong>, web developer yang berfokus pada pengembangan aplikasi menggunakan PHP dan Laravel.
                 </p>
 
                 {{-- Feature Cards --}}
@@ -19,9 +19,9 @@
                             💻
                         </div>
                         <div>
-                            <h3 class="font-display text-sm font-bold text-slate-900 dark:text-white">Arsitektur Berbasis PHP Class</h3>
+                            <h3 class="font-display text-sm font-bold text-slate-900 dark:text-white">Pengembangan Backend</h3>
                             <p class="mt-1 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
-                                Menerapkan prinsip Object-Oriented Programming (OOP) yang bersih: Controller Classes, Model, dan Service Layer di Laravel.
+                                Menggunakan PHP dan Laravel untuk membangun alur aplikasi web, mengelola data, dan menyusun fitur backend.
                             </p>
                         </div>
                     </div>
@@ -31,9 +31,9 @@
                             🎨
                         </div>
                         <div>
-                            <h3 class="font-display text-sm font-bold text-slate-900 dark:text-white">Tailwind CSS &amp; Desain Modern</h3>
+                            <h3 class="font-display text-sm font-bold text-slate-900 dark:text-white">Antarmuka Responsif</h3>
                             <p class="mt-1 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
-                                Mengembangkan layout responsif, tema gelap/terang, tipografi presisi, dan animasi antarmuka yang memikat.
+                                Membuat halaman yang rapi dan dapat digunakan dengan nyaman di berbagai ukuran layar.
                             </p>
                         </div>
                     </div>
@@ -43,9 +43,9 @@
                             🏛️
                         </div>
                         <div>
-                            <h3 class="font-display text-sm font-bold text-slate-900 dark:text-white">HIMA Informatika &amp; Kolaborasi</h3>
+                            <h3 class="font-display text-sm font-bold text-slate-900 dark:text-white">Kolaborasi &amp; Pembelajaran</h3>
                             <p class="mt-1 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
-                                Terlatih dalam manajemen proyek, kolaborasi tim pengembang, serta riset implementasi teknologi baru.
+                                Aktif belajar dan berkolaborasi melalui kegiatan pengembangan web dan organisasi kampus.
                             </p>
                         </div>
                     </div>
@@ -69,28 +69,26 @@
                     <div class="mt-8 grid gap-4 border-t border-slate-200/80 pt-6 sm:grid-cols-2 dark:border-slate-800">
                         <div class="flex items-center justify-between rounded-xl bg-slate-50 p-3.5 dark:bg-slate-800/50">
                             <div>
-                                <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Nama Lengkap</span>
+                                <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Nama</span>
                                 <p class="text-sm font-bold text-slate-900 dark:text-white">{{ $p['name'] }}</p>
                             </div>
-                            <span class="text-xs text-brand-600 dark:text-brand-400 font-bold">Mahasiswa</span>
+                            <span class="text-xs text-brand-600 dark:text-brand-400 font-bold">Web Developer</span>
                         </div>
 
                         <div class="flex items-center justify-between rounded-xl bg-slate-50 p-3.5 dark:bg-slate-800/50">
                             <div>
-                                <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">NPM</span>
-                                <p class="font-mono text-sm font-bold text-slate-900 dark:text-white">{{ $p['npm'] }}</p>
+                                <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Fokus</span>
+                                <p class="text-sm font-bold text-slate-900 dark:text-white">PHP &amp; Laravel</p>
                             </div>
-                            <button type="button" data-copy="{{ $p['npm'] }}" class="text-xs font-semibold text-brand-600 hover:underline dark:text-brand-400">
-                                Salin
-                            </button>
+                            <span class="text-xs text-slate-500">Web App</span>
                         </div>
 
                         <div class="flex items-center justify-between rounded-xl bg-slate-50 p-3.5 dark:bg-slate-800/50">
                             <div>
-                                <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Program Studi</span>
+                                <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Pendidikan</span>
                                 <p class="text-sm font-bold text-slate-900 dark:text-white">S1 Informatika</p>
                             </div>
-                            <span class="text-xs text-slate-500">Angkatan 2024</span>
+                            <span class="text-xs text-slate-500">Informatika</span>
                         </div>
 
                         <div class="flex items-center justify-between rounded-xl bg-slate-50 p-3.5 dark:bg-slate-800/50">
@@ -98,7 +96,7 @@
                                 <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Lokasi</span>
                                 <p class="text-sm font-bold text-slate-900 dark:text-white">{{ $p['location'] }}</p>
                             </div>
-                            <span class="text-xs text-emerald-600 font-semibold">Lampung</span>
+                            <span class="text-xs text-emerald-600 font-semibold">Indonesia</span>
                         </div>
 
                         <div class="flex items-center justify-between rounded-xl bg-slate-50 p-3.5 sm:col-span-2 dark:bg-slate-800/50">

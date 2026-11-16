@@ -1,70 +1,37 @@
-<section id="testimonials" class="bg-slate-950 py-20 text-white sm:py-28">
+<section id="approach" class="bg-slate-950 py-20 text-white sm:py-28">
     <div class="mx-auto max-w-6xl px-6">
-        <div class="reveal mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <div class="max-w-2xl">
-                <p class="section-eyebrow text-brand-300">Why clients choose me</p>
-                <h2 class="section-title text-white">Profesionalisme yang terlihat dari proses dan hasil.</h2>
-            </div>
-
-            <div class="grid grid-cols-2 gap-4 text-left sm:grid-cols-4">
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
-                    <div class="text-2xl font-black text-brand-300">100%</div>
-                    <div class="mt-1 text-xs text-slate-300">Dedikasi</div>
-                </div>
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
-                    <div class="text-2xl font-black text-brand-300">15+</div>
-                    <div class="mt-1 text-xs text-slate-300">Proyek</div>
-                </div>
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
-                    <div class="text-2xl font-black text-brand-300">24/7</div>
-                    <div class="mt-1 text-xs text-slate-300">Kesiapan</div>
-                </div>
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
-                    <div class="text-2xl font-black text-brand-300">Fast</div>
-                    <div class="mt-1 text-xs text-slate-300">Delivery</div>
-                </div>
-            </div>
+        <div class="reveal mb-12 max-w-2xl">
+            <p class="section-eyebrow text-brand-300">Cara Kerja</p>
+            <h2 class="section-title text-white">Proses yang jelas dari awal hingga selesai.</h2>
+            <p class="mt-4 text-slate-300">
+                Pendekatan kerja yang membantu menjaga solusi tetap sesuai kebutuhan dan mudah dipelihara.
+            </p>
         </div>
 
-        <div class="grid gap-6 lg:grid-cols-3">
-            <div class="reveal rounded-3xl border border-white/10 bg-white/5 p-6">
-                <div class="mb-4 flex items-center gap-1 text-brand-300">
-                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-                <p class="text-sm leading-relaxed text-slate-200">
-                    "Prosesnya rapi, komunikasi jelas, dan hasil desainnya sangat berkelas. Saya merasa proyek berjalan dengan struktur yang matang."
+        <div class="grid gap-6 md:grid-cols-3">
+            <article class="reveal rounded-3xl border border-white/10 bg-white/5 p-6">
+                <span class="font-mono text-sm font-bold text-brand-300">01</span>
+                <h3 class="mt-4 font-display text-lg font-bold text-white">Pahami kebutuhan</h3>
+                <p class="mt-2 text-sm leading-relaxed text-slate-300">
+                    Menyepakati tujuan, pengguna, dan ruang lingkup sebelum mulai mengembangkan fitur.
                 </p>
-                <div class="mt-5 border-t border-white/10 pt-4">
-                    <div class="font-display text-base font-bold text-white">Client Feedback</div>
-                    <div class="text-xs text-slate-400">Project Collaboration</div>
-                </div>
-            </div>
+            </article>
 
-            <div class="reveal rounded-3xl border border-white/10 bg-white/5 p-6">
-                <div class="mb-4 flex items-center gap-1 text-brand-300">
-                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-                <p class="text-sm leading-relaxed text-slate-200">
-                    "Saya suka cara penyampaian ide dan fokus pada kebutuhan user. Produk yang dibuat terasa professional dan siap digunakan."
+            <article class="reveal rounded-3xl border border-white/10 bg-white/5 p-6">
+                <span class="font-mono text-sm font-bold text-brand-300">02</span>
+                <h3 class="mt-4 font-display text-lg font-bold text-white">Bangun secara terstruktur</h3>
+                <p class="mt-2 text-sm leading-relaxed text-slate-300">
+                    Membagi pekerjaan menjadi bagian yang terukur, dengan perhatian pada keterbacaan kode dan pengalaman pengguna.
                 </p>
-                <div class="mt-5 border-t border-white/10 pt-4">
-                    <div class="font-display text-base font-bold text-white">Creative Partner</div>
-                    <div class="text-xs text-slate-400">Digital Product</div>
-                </div>
-            </div>
+            </article>
 
-            <div class="reveal rounded-3xl border border-white/10 bg-white/5 p-6">
-                <div class="mb-4 flex items-center gap-1 text-brand-300">
-                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-                <p class="text-sm leading-relaxed text-slate-200">
-                    "Detail dan struktur kodenya sangat rapi. Bahkan untuk project kecil, terasa seperti dibuat oleh tim profesional yang siap scale."
+            <article class="reveal rounded-3xl border border-white/10 bg-white/5 p-6">
+                <span class="font-mono text-sm font-bold text-brand-300">03</span>
+                <h3 class="mt-4 font-display text-lg font-bold text-white">Uji dan komunikasikan</h3>
+                <p class="mt-2 text-sm leading-relaxed text-slate-300">
+                    Memeriksa hasil, menyampaikan progres, dan mendokumentasikan hal penting untuk pengembangan berikutnya.
                 </p>
-                <div class="mt-5 border-t border-white/10 pt-4">
-                    <div class="font-display text-base font-bold text-white">Development Review</div>
-                    <div class="text-xs text-slate-400">Laravel &amp; UI System</div>
-                </div>
-            </div>
+            </article>
         </div>
     </div>
 </section>

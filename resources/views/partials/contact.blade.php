@@ -6,7 +6,7 @@
                 <p class="section-eyebrow">Hubungi Saya</p>
                 <h2 class="section-title">Mari Berdiskusi &amp; Berkolaborasi</h2>
                 <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400">
-                    Tertarik mengembangkan proyek aplikasi web dengan Laravel &amp; Tailwind CSS, atau ingin berdiskusi seputar dunia informatika? Silakan hubungi saya melalui jalur di bawah ini.
+                    Untuk peluang kerja, kolaborasi, atau diskusi seputar pengembangan web, silakan hubungi saya melalui salah satu kanal berikut.
                 </p>
 
                 {{-- Contact Method Cards --}}
@@ -49,17 +49,22 @@
                         </a>
                     </div>
 
-                    {{-- Campus / Academic Card --}}
+                    {{-- Professional Profiles --}}
                     <div class="card !p-4 flex items-center gap-3.5">
                         <div class="flex size-10 shrink-0 items-center justify-center rounded-xl bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-400">
-                            🎓
+                            ↗
                         </div>
                         <div>
-                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Identitas Akademik</span>
-                            <p class="text-sm font-bold text-slate-900 dark:text-white">
-                                Perdi · NPM: <span class="font-mono text-brand-600 dark:text-brand-400">{{ $p['npm'] }}</span>
-                            </p>
-                            <p class="text-xs text-slate-500">S1 Informatika — Bandar Lampung</p>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Profil Profesional</span>
+                            <div class="mt-1 flex gap-3 text-sm font-bold">
+                                @foreach ($p['socials'] as $social)
+                                    @if (in_array($social['name'], ['GitHub', 'LinkedIn'], true))
+                                        <a href="{{ $social['url'] }}" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-brand-600 dark:text-white dark:hover:text-brand-400">
+                                            {{ $social['name'] }}
+                                        </a>
+                                    @endif
+                                @endforeach
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -119,7 +124,7 @@
                             <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
                         </button>
 
-                        <button type="button" id="send-wa-quick" class="btn-whatsapp flex-1">
+                        <button type="button" id="send-wa-quick" data-whatsapp="{{ $p['whatsapp'] }}" data-owner-name="{{ $p['name'] }}" class="btn-whatsapp flex-1">
                             <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.102-.115.434-.506.549-.68.116-.173.232-.144.39-.086.159.058 1.011.477 1.184.564.173.086.289.13.332.202.043.072.043.419-.101.824z"/></svg>
                             <span>Kirim ke WhatsApp</span>
                         </button>

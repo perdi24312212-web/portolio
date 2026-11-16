@@ -9,6 +9,5 @@
     @include('partials.testimonials')
     @include('partials.experience')
     @include('partials.contact')
-    @include('partials.modal')
 @endsection
 

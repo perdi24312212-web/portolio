@@ -8,16 +8,14 @@
     <meta name="theme-color" content="#4f46e5">
     <meta name="color-scheme" content="light dark">
     <meta name="author" content="{{ $p['name'] }}">
-    <meta name="keywords" content="Perdi, Full-Stack Web Developer, PHP Laravel, Tailwind CSS, Portfolio, Informatika, NPM 24312212">
-    <title>{{ $p['name'] }} — {{ $p['role'] }} (NPM: {{ $p['npm'] }})</title>
+    <meta name="keywords" content="Perdi, Web Developer, PHP, Laravel, MySQL, Portfolio">
+    <title>{{ $p['name'] }} — {{ $p['role'] }}</title>
     <meta name="description" content="{{ $p['tagline'] }}">
-    <link rel="canonical" href="{{ config('app.url', 'https://yourdomain.com') }}/">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Perdi Portfolio">
     <meta property="og:title" content="{{ $p['name'] }} — {{ $p['role'] }}">
     <meta property="og:description" content="{{ $p['tagline'] }}">
-    <meta property="og:url" content="{{ config('app.url', 'https://yourdomain.com') }}/">
     <meta property="og:image" content="{{ asset('images/foto.jpg') }}">
     <meta property="og:image:alt" content="Perdi portfolio profile image">
 
@@ -163,16 +161,12 @@
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "{{ $p['name'] }}",
-      "jobTitle": "{{ $p['role'] }}",
-      "description": "{{ $p['tagline'] }}",
-      "email": "mailto:{{ $p['email'] }}",
-      "telephone": "{{ $p['phone_formatted'] }}",
-      "url": "{{ config('app.url', 'https://yourdomain.com') }}/",
-      "sameAs": [
-        "https://github.com/perdi24312212",
-        "https://wa.me/6285319147609"
-      ],
+      "name": @json($p['name']),
+      "jobTitle": @json($p['role']),
+      "description": @json($p['tagline']),
+      "email": @json('mailto:'.$p['email']),
+      "telephone": @json($p['phone_formatted']),
+      "sameAs": @json(array_column($p['socials'], 'url')),
       "knowsAbout": [
         "Laravel",
         "PHP",
@@ -185,7 +179,6 @@
     </script>
 
     {{-- Main Script --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>

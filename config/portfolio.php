@@ -11,9 +11,9 @@ return [
     'name' => 'Perdi',
     'full_title' => 'Perdi — S1 Informatika',
     'npm' => '24312212',
-    'role' => 'Full-Stack Web Developer & Informatics Student',
-    'tagline' => 'Mahasiswa S1 Informatika (NPM: 24312212) yang berfokus menciptakan aplikasi web modern, performa tinggi, dan antarmuka interaktif menggunakan Laravel, PHP OOP Class, dan Tailwind CSS.',
-    'short_bio' => 'Passionate dalam rekayasa perangkat lunak, arsitektur Clean Code berbasis Class, dan perancangan antarmuka pengguna yang memukau.',
+    'role' => 'Web Developer | PHP, Laravel & MySQL',
+    'tagline' => 'Web developer yang berfokus pada pengembangan aplikasi menggunakan PHP dan Laravel, dari pengelolaan data hingga antarmuka web yang responsif.',
+    'short_bio' => 'Saya berfokus pada pengembangan aplikasi web, pengelolaan data, dan antarmuka yang mudah digunakan.',
     'location' => 'Bandar Lampung, Indonesia',
     'email' => 'perdi24312212@gmail.com',
     'alt_email' => 'perdi24312212@fmail.com',
@@ -25,9 +25,9 @@ return [
     'photo' => 'images/foto.jpg',
 
     'about' => [
-        'Saya adalah seorang mahasiswa program studi S1 Informatika angkatan 2024 dengan NPM 24312212. Saya memiliki minat mendalam pada pengembangan aplikasi web, perancangan basis data, dan arsitektur sistem berbasis Object-Oriented Programming (OOP Class) dengan Framework Laravel.',
-        'Aktif dalam organisasi kemahasiswaan HIMA Informatika, saya terbiasa berkolaborasi dalam tim, memecahkan masalah komputasi, serta mengeksplorasi teknologi web mutakhir seperti Tailwind CSS, REST API, dan ekosistem modern Laravel.',
-        'Saya berdedikasi untuk selalu menulis kode yang rapi, terstruktur, mudah di-maintenance, dan menghadirkan pengalaman pengguna (UI/UX) yang intuitif dan berestetika tinggi.',
+        'Saya mengembangkan aplikasi web menggunakan PHP dan Laravel, dengan perhatian pada struktur aplikasi, pengelolaan data, dan kebutuhan pengguna.',
+        'Saat ini saya menempuh pendidikan S1 Informatika dan aktif memperdalam pengembangan web melalui proyek serta kegiatan organisasi.',
+        'Saya terbuka untuk kesempatan kerja dan kolaborasi yang memberi ruang untuk belajar, berkontribusi, dan mengembangkan solusi digital.',
     ],
 
     'stats' => [
@@ -139,14 +139,14 @@ return [
             'title' => 'Pengembang Web & Anggota Aktif',
             'company' => 'HIMA Informatika (Himpunan Mahasiswa Informatika)',
             'location' => 'Bandar Lampung',
-            'description' => 'Berpartisipasi aktif dalam divisi teknologi dan riset. Mengembangkan aplikasi penunjang kegiatan kemahasiswaan dan workshop pemrograman dasar.',
+            'description' => 'Berpartisipasi dalam kegiatan organisasi dan berkolaborasi dalam kegiatan kemahasiswaan.',
         ],
         [
             'period' => '2024 - Sekarang',
             'title' => 'Freelance Web Developer & Projects',
             'company' => 'Studi Mandiri & Klien Lokal',
             'location' => 'Remote / Bandar Lampung',
-            'description' => 'Mengerjakan pembuatan website profil, portal administrasi data, dan sistem informasi berbasis framework Laravel serta Tailwind CSS.',
+            'description' => 'Mengembangkan kemampuan melalui proyek mandiri yang berfokus pada website dan sistem informasi menggunakan Laravel.',
         ],
     ],
 

@@ -7,7 +7,7 @@
                     Perdi<span class="text-brand-600 dark:text-brand-400">.dev</span>
                 </a>
                 <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
-                    Mahasiswa S1 Informatika (NPM: <span class="font-mono text-brand-600 dark:text-brand-400 font-semibold">{{ $p['npm'] }}</span>) · Web Developer
+                    Web Developer · PHP, Laravel &amp; MySQL
                 </p>
             </div>
 
@@ -28,8 +28,8 @@
         </div>
 
         <div class="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 dark:border-slate-800/80">
-            <p>&copy; {{ date('Y') }} {{ $p['name'] }} (NPM: {{ $p['npm'] }}). Hak Cipta Dilindungi.</p>
-            <p class="mt-2 sm:mt-0">Himpunan Mahasiswa Informatika · Bandar Lampung</p>
+            <p>&copy; {{ date('Y') }} {{ $p['name'] }}.</p>
+            <p class="mt-2 sm:mt-0">{{ $p['location'] }}</p>
         </div>
     </div>
 </footer>

@@ -1,11 +1,11 @@
 @php
     $nav = [
         'about' => 'Tentang',
-        'services' => 'Layanan',
+        'services' => 'Fokus',
         'skills' => 'Keahlian',
         'projects' => 'Proyek',
-        'testimonials' => 'Review',
-        'experience' => 'Perjalanan',
+        'approach' => 'Cara Kerja',
+        'experience' => 'Pengalaman',
         'contact' => 'Kontak',
     ];
 @endphp
@@ -22,11 +22,8 @@
                     <span class="font-display text-lg font-extrabold tracking-tight text-slate-900 dark:text-white">
                         Perdi<span class="text-brand-600 dark:text-brand-400">.dev</span>
                     </span>
-                    <span class="rounded-md border border-brand-200 bg-brand-50 px-2 py-0.5 text-[10px] font-bold text-brand-700 dark:border-brand-500/30 dark:bg-brand-500/10 dark:text-brand-300">
-                        NPM {{ $p['npm'] }}
-                    </span>
                 </div>
-                <p class="text-[11px] font-medium text-slate-500 dark:text-slate-400">S1 Informatika · Web Dev</p>
+                <p class="text-[11px] font-medium text-slate-500 dark:text-slate-400">Web Developer · PHP &amp; Laravel</p>
             </div>
         </a>
 
@@ -72,7 +69,7 @@
         <div class="mb-4 flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
             <div>
                 <p class="font-display text-sm font-bold text-slate-900 dark:text-white">{{ $p['name'] }}</p>
-                <p class="text-xs text-brand-600 dark:text-brand-400">NPM: {{ $p['npm'] }} · S1 Informatika</p>
+                <p class="text-xs text-brand-600 dark:text-brand-400">Web Developer · {{ $p['location'] }}</p>
             </div>
             <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300">
                 <span class="size-2 rounded-full bg-emerald-500 animate-pulse"></span>
