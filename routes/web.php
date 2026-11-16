@@ -21,6 +21,17 @@ Route::get('/', function () {
 
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('home');
 
+Route::get('/download-cv', function () {
+    $path = public_path('cv/Perdi-CV.pdf');
+    if (!file_exists($path)) {
+        abort(404, 'File CV belum tersedia.');
+    }
+
+    return response()->download($path, 'Perdi-CV.pdf', [
+        'Content-Type' => 'application/pdf',
+    ]);
+})->name('cv.download');
+
 Route::post('/contact', [ContactController::class, 'send'])
     ->middleware('throttle:5,1')
     ->name('contact.send');
